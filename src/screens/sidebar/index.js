@@ -13,9 +13,14 @@ import {
 } from "native-base";
 import styles from "./style";
 
-const drawerCover = require("../../../assets/drawer-cover.png");
-const drawerImage = require("../../../assets/logo-kitchen-sink.png");
+const drawerCover = require("../../../assets/drawer.png");
 const datas = [
+  {
+    name: "PendingTasksScreen",
+    route: "PendingTasksScreen",
+    icon: "phone-portrait",
+    bg: "#C5F442"
+  },
   {
     name: "Anatomy",
     route: "Anatomy",
@@ -192,7 +197,6 @@ class SideBar extends Component {
           style={{ flex: 1, backgroundColor: "#fff", top: -1 }}
         >
           <Image source={drawerCover} style={styles.drawerCover} />
-          <Image square style={styles.drawerImage} source={drawerImage} />
 
           <List
             dataArray={datas}

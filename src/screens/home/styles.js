@@ -7,7 +7,7 @@ export default {
     flex: 1,
     width: null,
     height: null,
-    backgroundColor: '#4b88c6'
+    backgroundColor: '#bdc0c0'
   },
   logoContainer: {
     flex: 1,
@@ -22,7 +22,7 @@ export default {
     height: 150
   },
   text: {
-    color: "#D8D8D8",
+    color: "#5f3a17",
     bottom: 6,
     marginTop: 5
   }

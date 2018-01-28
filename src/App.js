@@ -2,6 +2,8 @@ import React from "react";
 import { Root } from "native-base";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 
+import PendingTasksScreen from "./screens/pendingtasks";
+
 import Header from "./screens/Header/";
 import Header1 from "./screens/Header/1";
 import Header2 from "./screens/Header/2";
@@ -106,6 +108,7 @@ import Actionsheet from "./screens/actionsheet";
 
 const Drawer = DrawerNavigator(
   {
+    PendingTasksScreen: { screen: PendingTasksScreen},
     Home: { screen: Home },
     Anatomy: { screen: Anatomy },
     Header: { screen: Header },
