@@ -16,17 +16,26 @@ const TaskService = {
       TaskService.save(new Task(webTask));
     });
 
+    //  for testing
     let tasks = TaskService.findAll();
-
     tasks.forEach(task => {
       console.log(task);
       console.log(task.id);
     });
 
+    console.log(TaskService.find(1));
+    console.log(TaskService.find(1).displayName);
+
   },
 
   find: function(id) {
-    return repository.objects('Task').filtered("id = '" + task.id + "'");
+    let result = repository.objects('Task').filtered("id = '" + id + "'");
+
+    if (result.length) {
+      return result[0];
+    } else {
+      throw new Error('Task with id: ' + id + ' not found');
+    }    
   },
 
   findAll: function (sortBy) {

@@ -94,7 +94,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       value: function componentDidMount() {
         var _this2 = this;
 
-        var authenticationToken, userAPI;
+        var authenticationToken, connectionInfo, userAPI;
         return regeneratorRuntime.async(function componentDidMount$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
@@ -107,19 +107,40 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 authenticationToken = _context.sent;
 
                 if (!authenticationToken) {
-                  _context.next = 15;
+                  _context.next = 23;
                   break;
                 }
 
                 this.setState({
                   authenticated: true
                 });
-                console.log('authenticated, will lookup user from server later');
+                console.log('authenticated, now validating if token is still valid');
+                _context.next = 9;
+                return regeneratorRuntime.awrap(_reactNative.NetInfo.getConnectionInfo());
+
+              case 9:
+                connectionInfo = _context.sent;
+
+                if (!(connectionInfo.type == 'none')) {
+                  _context.next = 15;
+                  break;
+                }
+
+                console.log('Checking is aborted, no connection to server');
+                this.setState({
+                  authenticated: true
+                });
+                this.setState({
+                  loading: false
+                });
+                return _context.abrupt("return");
+
+              case 15:
                 _context.t0 = _UserAPI2.default;
-                _context.next = 10;
+                _context.next = 18;
                 return regeneratorRuntime.awrap(_reactNative.AsyncStorage.getItem('@Connect:Server'));
 
-              case 10:
+              case 18:
                 _context.t1 = _context.sent;
                 userAPI = new _context.t0(_context.t1);
                 userAPI.checkToken(authenticationToken).then(function () {
@@ -138,23 +159,23 @@ __d(function (global, require, module, exports, _dependencyMap) {
                       authenticated: false
                     });
                   } else {
-                    console.error(error);
-                    throw new Error(error);
+                    console.error(err);
+                    throw new Error(err);
                   }
 
                   _this2.setState({
                     loading: false
                   });
                 });
-                _context.next = 16;
+                _context.next = 24;
                 break;
 
-              case 15:
+              case 23:
                 this.setState({
                   loading: false
                 });
 
-              case 16:
+              case 24:
               case "end":
                 return _context.stop();
             }
@@ -228,8 +249,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
                       authenticated: false
                     });
                   } else {
-                    console.error(error);
-                    throw new Error(error);
+                    console.error(err);
+                    throw new Error(err);
                   }
                 });
 
@@ -251,13 +272,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 89
+                lineNumber: 98
               }
             },
             _react3.default.createElement(_splashscreen2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 90
+                lineNumber: 99
               }
             })
           );
@@ -268,7 +289,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 94
+              lineNumber: 103
             }
           });
         } else {
@@ -277,13 +298,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
             {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 97
+                lineNumber: 106
               }
             },
             _react3.default.createElement(_setup2.default, {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 98
+                lineNumber: 107
               }
             })
           );

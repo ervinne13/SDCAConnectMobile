@@ -9,7 +9,7 @@ import UserAPI from './src/api/UserAPI';
 import Task from './src/models/Task';
 import TaskService from './src/services/TaskService';
 
-import {AsyncStorage} from "react-native";
+import {AsyncStorage, NetInfo} from "react-native";
 import {Root, Toast} from "native-base";
 
 export default class App extends React.Component {
@@ -28,7 +28,16 @@ export default class App extends React.Component {
     if (authenticationToken) {
       
       this.setState({authenticated: true});
-      console.log('authenticated, will lookup user from server later');
+      console.log('authenticated, now validating if token is still valid');
+
+      const connectionInfo = await NetInfo.getConnectionInfo();
+
+      if (connectionInfo.type == 'none') {
+        console.log('Checking is aborted, no connection to server');
+        this.setState({authenticated: true});
+        this.setState({loading: false});
+        return;
+      }
 
       let userAPI = new UserAPI(await AsyncStorage.getItem('@Connect:Server'));
       userAPI.checkToken(authenticationToken)
@@ -41,8 +50,8 @@ export default class App extends React.Component {
           if (err === 401) {  //  Unauthorized
             this.setState({authenticated: false});
           } else {
-            console.error(error);
-            throw new Error(error);
+            console.error(err);
+            throw new Error(err);
           }        
 
           this.setState({loading: false});
@@ -77,8 +86,8 @@ export default class App extends React.Component {
         if (err === 401) {  //  Unauthorized
           this.setState({authenticated: false});
         } else {
-          console.error(error);
-          throw new Error(error);
+          console.error(err);
+          throw new Error(err);
         }        
       });
   }
