@@ -22,7 +22,9 @@ Task.schema = {
     typeCode: { type: 'string' },
     displayName: { type: 'string' },
     description: { type: 'string' },
-    // items: {type: 'list', objectType: 'TaskItem'}
+    items: {type: 'list', objectType: 'TaskItem'},
+    createdAt: { type: 'date' },
+    updatedAt: { type: 'date' },
   }
 };
 

@@ -11,10 +11,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _Task2 = _interopRequireDefault(_Task);
 
+  var _TaskItem = require(_dependencyMap[2], "../models/TaskItem");
+
+  var _TaskItem2 = _interopRequireDefault(_TaskItem);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   exports.default = new _realm2.default({
-    schema: [_Task2.default.schema],
-    schemaVersion: 2
+    schema: [_TaskItem2.default.schema, _Task2.default.schema],
+    schemaVersion: 3
   });
 });
