@@ -18,7 +18,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   exports.default = new _realm2.default({
-    schema: [_TaskItem2.default.schema, _Task2.default.schema],
-    schemaVersion: 3
+    schema: [_Task2.default.schema, _TaskItem2.default.schema],
+    schemaVersion: 7
   });
 });

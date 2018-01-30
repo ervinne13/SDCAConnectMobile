@@ -1,17 +1,21 @@
 __d(function (global, require, module, exports, _dependencyMap) {
-  var _realm = require(_dependencyMap[0], "realm");
+  var _lodash = require(_dependencyMap[0], "lodash");
+
+  var _lodash2 = _interopRequireDefault(_lodash);
+
+  var _realm = require(_dependencyMap[1], "realm");
 
   var _realm2 = _interopRequireDefault(_realm);
 
-  var _Task = require(_dependencyMap[1], "../models/Task");
+  var _Task = require(_dependencyMap[2], "../models/Task");
 
   var _Task2 = _interopRequireDefault(_Task);
 
-  var _TaskAPI = require(_dependencyMap[2], "../api/TaskAPI");
+  var _TaskAPI = require(_dependencyMap[3], "../api/TaskAPI");
 
   var _TaskAPI2 = _interopRequireDefault(_TaskAPI);
 
-  var _schema = require(_dependencyMap[3], "../schema/schema");
+  var _schema = require(_dependencyMap[4], "../schema/schema");
 
   var _schema2 = _interopRequireDefault(_schema);
 
@@ -20,7 +24,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var repository = _schema2.default;
   var TaskService = {
     beginSync: function beginSync(server, authToken) {
-      var api, webTasks, tasks;
+      var api, webTasks, tasks, lodashTaskItems;
       return regeneratorRuntime.async(function beginSync$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -33,6 +37,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             case 4:
               webTasks = _context.sent;
               webTasks.forEach(function (webTask) {
+                console.log(webTask);
                 TaskService.save(new _Task2.default(webTask));
               });
               tasks = TaskService.findAll();
@@ -42,8 +47,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
               });
               console.log(TaskService.find(1));
               console.log(TaskService.find(1).displayName);
+              lodashTaskItems = _lodash2.default.values(TaskService.find(1).items);
+              console.log(lodashTaskItems);
 
-            case 10:
+            case 12:
             case "end":
               return _context.stop();
           }

@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import Realm from 'realm';
 import Task from '../models/Task';
 import TaskAPI from '../api/TaskAPI';
@@ -13,6 +14,7 @@ const TaskService = {
     let webTasks = await api.getTasks(); //  TODO: add date filtering
     
     webTasks.forEach(webTask => {
+      console.log(webTask);
       TaskService.save(new Task(webTask));
     });
 
@@ -25,6 +27,9 @@ const TaskService = {
 
     console.log(TaskService.find(1));
     console.log(TaskService.find(1).displayName);
+
+    let lodashTaskItems = _.values(TaskService.find(1).items);
+    console.log(lodashTaskItems);
 
   },
 

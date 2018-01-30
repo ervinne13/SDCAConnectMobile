@@ -1,7 +1,15 @@
 __d(function (global, require, module, exports, _dependencyMap) {
+  var _TaskItem = require(_dependencyMap[0], "./TaskItem");
+
+  var _TaskItem2 = _interopRequireDefault(_TaskItem);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   var Task = function Task() {
+    var _this = this;
+
     var webTask = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _classCallCheck(this, Task);
@@ -14,6 +22,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
     this.description = webTask.description;
     this.createdAt = webTask.created_at;
     this.updatedAt = webTask.updated_at;
+    this.items = [];
+    webTask.items.forEach(function (item) {
+      _this.items.push(new _TaskItem2.default(item));
+    });
   };
 
   Task.schema = {
