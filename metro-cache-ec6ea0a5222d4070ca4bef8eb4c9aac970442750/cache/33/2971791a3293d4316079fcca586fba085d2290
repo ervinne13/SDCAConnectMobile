@@ -1,0 +1,9 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var baseIndexOf = require(_dependencyMap[0], './_baseIndexOf');
+
+  function arrayIncludes(array, value) {
+    return !!array.length && baseIndexOf(array, value, 0) > -1;
+  }
+
+  module.exports = arrayIncludes;
+});

@@ -4,7 +4,8 @@ import {Container, Button, H2, H3, Text} from "native-base";
 
 import styles from "./styles";
 
-const npLogo = require("../../../assets/Splash2.png");
+// const npLogo = require("../../../assets/Splash2.png");
+const npLogo = require("../../../assets/splashscreen.png");
 
 class Home extends Component {
 

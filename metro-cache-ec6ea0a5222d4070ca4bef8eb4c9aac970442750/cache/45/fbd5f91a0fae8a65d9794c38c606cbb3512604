@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/assets/contacts",
+		"width": 300,
+		"height": 300,
+		"scales": [1],
+		"hash": "8a70256f0064ee3714327dda6f1f6101",
+		"name": "saurabh",
+		"type": "png"
+	});
+});

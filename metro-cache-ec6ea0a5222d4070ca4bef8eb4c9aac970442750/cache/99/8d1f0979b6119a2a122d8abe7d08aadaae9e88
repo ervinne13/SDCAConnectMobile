@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/assets/contacts",
+		"width": 510,
+		"height": 813,
+		"scales": [1],
+		"hash": "5a341458fbdd26e65bf88f67254dc66c",
+		"name": "supriya",
+		"type": "png"
+	});
+});

@@ -23,11 +23,10 @@ import styles from "./styles";
 class Login extends Component {
 
   constructor(props) {
-    console.log('tst');
     super(props);
 
     this.state = {
-      server: 'http://192.168.1.5',
+      server: 'http://172.16.150.229:8011',
       username: null,
       password: null,
       isLoading: false,
@@ -48,11 +47,13 @@ class Login extends Component {
   async onLogin() {
     this.setState({isLoading: true});
 
+    AsyncStorage.setItem('@Connect:Server', this.state.server);
+
     try {
       let url = this.state.server + '/api/v1/login';
       let params = {
         // username: this.state.username,
-        username: 'alta.mayer',
+        username: 'adolfo55',
         // password: this.state.password
         password: 'secret'
       };

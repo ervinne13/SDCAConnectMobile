@@ -1,0 +1,2644 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/var/www/mobile/SDCAConnectMobile/src/screens/icon/state.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _nativeBase = require(_dependencyMap[2], "native-base");
+
+  var _styles = require(_dependencyMap[3], "./styles");
+
+  var _styles2 = _interopRequireDefault(_styles);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    State: {
+      displayName: "State"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/var/www/mobile/SDCAConnectMobile/src/screens/icon/state.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var State = _wrapComponent("State")(function (_Component) {
+    _inherits(State, _Component);
+
+    function State() {
+      _classCallCheck(this, State);
+
+      return _possibleConstructorReturn(this, (State.__proto__ || Object.getPrototypeOf(State)).apply(this, arguments));
+    }
+
+    _createClass(State, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react3.default.createElement(
+          _nativeBase.Container,
+          {
+            style: _styles2.default.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 24
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Header,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 25
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Left,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 26
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  transparent: true,
+                  onPress: function onPress() {
+                    return _this2.replaceAt("icon");
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 27
+                  }
+                },
+                _react3.default.createElement(_nativeBase.Icon, {
+                  name: "arrow-back",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 28
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 31
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Title,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 32
+                  }
+                },
+                "Icons"
+              )
+            ),
+            _react3.default.createElement(_nativeBase.Right, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Content,
+            {
+              padder: true,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 37
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Grid,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 38
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 40
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-apple",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 41
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 42
+                      }
+                    },
+                    "logo-apple"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 46
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "pizza",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 47
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 48
+                      }
+                    },
+                    "pizza"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 50
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "person",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 51
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 52
+                      }
+                    },
+                    "person"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 54
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "beer",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 55
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 56
+                      }
+                    },
+                    "beer"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 58
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "bicycle",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 59
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 60
+                      }
+                    },
+                    "bicycle"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 64
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 65
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "navigate",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 66
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 67
+                      }
+                    },
+                    "navigate"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 69
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "cloud-circle",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 70
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 71
+                      }
+                    },
+                    "cloud-circle"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 75
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "pie",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 76
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 77
+                      }
+                    },
+                    "pie"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 79
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "bookmarks",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 80
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 81
+                      }
+                    },
+                    "bookmarks"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 83
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "pulse",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 84
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 85
+                      }
+                    },
+                    "pulse"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 89
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 90
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "camera",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 91
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 92
+                      }
+                    },
+                    "camera"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 94
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "mic-off",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 95
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 96
+                      }
+                    },
+                    "mic-off"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 98
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "film",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 99
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 100
+                      }
+                    },
+                    "film"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 102
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "flame",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 103
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 104
+                      }
+                    },
+                    "flame"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 106
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "paper",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 107
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 108
+                      }
+                    },
+                    "paper"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 112
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 113
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "paper-plane",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 114
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 115
+                      }
+                    },
+                    "paper-plane"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 119
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "cart",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 120
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 121
+                      }
+                    },
+                    "cart"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 123
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "flask",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 124
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 125
+                      }
+                    },
+                    "flask"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 127
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "paw",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 128
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 129
+                      }
+                    },
+                    "paw"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 131
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "rose",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 132
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 133
+                      }
+                    },
+                    "rose"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 137
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 138
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "pint",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 139
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 140
+                      }
+                    },
+                    "pint"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 142
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "shuffle",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 143
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 144
+                      }
+                    },
+                    "shuffle"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 146
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "keypad",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 147
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 148
+                      }
+                    },
+                    "keypad"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 150
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "eye",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 151
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 152
+                      }
+                    },
+                    "eye"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 154
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "glasses",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 155
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 156
+                      }
+                    },
+                    "glasses"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 160
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 161
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "microphone",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 162
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 163
+                      }
+                    },
+                    "microphone"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 167
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "color-filter",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 168
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 169
+                      }
+                    },
+                    "color-filter"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 173
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "alarm",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 174
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 175
+                      }
+                    },
+                    "alarm"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 177
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "medkit",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 178
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 179
+                      }
+                    },
+                    "medkit"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 181
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "ionic",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 182
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 183
+                      }
+                    },
+                    "ionic"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 187
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 188
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "refresh",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 189
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 190
+                      }
+                    },
+                    "refresh"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 192
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "star-half",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 193
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 194
+                      }
+                    },
+                    "star-half"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 196
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "train",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 197
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 198
+                      }
+                    },
+                    "train"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 200
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "wine",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 201
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 202
+                      }
+                    },
+                    "wine"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 204
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "partly-sunny",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 205
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 206
+                      }
+                    },
+                    "partly-sunny"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 212
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 213
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "nutrition",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 214
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 215
+                      }
+                    },
+                    "nutrition"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 217
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "grid",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 218
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 219
+                      }
+                    },
+                    "grid"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 221
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "settings",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 222
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 223
+                      }
+                    },
+                    "settings"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 225
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "chatbubbles",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 226
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 227
+                      }
+                    },
+                    "chatbubbles"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 231
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "speedometer",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 232
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 233
+                      }
+                    },
+                    "speedometer"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 239
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 240
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "chatboxes",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 241
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 242
+                      }
+                    },
+                    "chatboxes"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 244
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "cog",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 245
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 246
+                      }
+                    },
+                    "cog"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 248
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "baseball",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 249
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 250
+                      }
+                    },
+                    "baseball"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 252
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "bulb",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 253
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 254
+                      }
+                    },
+                    "bulb"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 256
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "calculator",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 257
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 258
+                      }
+                    },
+                    "calculator"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 264
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 265
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "rainy",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 266
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 267
+                      }
+                    },
+                    "rainy"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 269
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "videocam",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 270
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 271
+                      }
+                    },
+                    "videocam"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 273
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "play",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 274
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 275
+                      }
+                    },
+                    "play"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 277
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "disc",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 278
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 279
+                      }
+                    },
+                    "disc"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 281
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "body",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 282
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 283
+                      }
+                    },
+                    "body"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 287
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 288
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "lock",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 289
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 290
+                      }
+                    },
+                    "lock"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 292
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "key",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 293
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 294
+                      }
+                    },
+                    "key"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 296
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "flag",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 297
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 298
+                      }
+                    },
+                    "flag"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 300
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "skip-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 301
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 302
+                      }
+                    },
+                    "skip-forward"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 306
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-github",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 307
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 308
+                      }
+                    },
+                    "logo-github"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 314
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 315
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "barcode",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 316
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 317
+                      }
+                    },
+                    "barcode"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 319
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-tux",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 320
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 321
+                      }
+                    },
+                    "logo-tux"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 323
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "copy",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 324
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 325
+                      }
+                    },
+                    "copy"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 327
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "stopwatch",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 328
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 329
+                      }
+                    },
+                    "stopwatch"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 331
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "medical",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 332
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 333
+                      }
+                    },
+                    "medical"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 337
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 338
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "archive",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 339
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 340
+                      }
+                    },
+                    "archive"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 342
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "bookmark",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 343
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 344
+                      }
+                    },
+                    "bookmark"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 346
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "clipboard",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 347
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 348
+                      }
+                    },
+                    "clipboard"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 350
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "happy",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 351
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 352
+                      }
+                    },
+                    "happy"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 354
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "share",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 355
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 356
+                      }
+                    },
+                    "share"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 360
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 361
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "bluetooth",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 362
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 363
+                      }
+                    },
+                    "bluetooth"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 365
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "search",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 366
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 367
+                      }
+                    },
+                    "search"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 369
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "wifi",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 370
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 371
+                      }
+                    },
+                    "wifi"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 373
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "hand",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 374
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 375
+                      }
+                    },
+                    "hand"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 377
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "trash",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 378
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 379
+                      }
+                    },
+                    "trash"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 383
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 384
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "images",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 385
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 386
+                      }
+                    },
+                    "images"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 388
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "attach",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 389
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 390
+                      }
+                    },
+                    "attach"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 392
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-facebook",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 393
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 394
+                      }
+                    },
+                    "logo-facebook"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 398
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-googleplus",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 399
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 400
+                      }
+                    },
+                    "logo-googleplus"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 404
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-twitter",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 405
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 406
+                      }
+                    },
+                    "logo-twitter"
+                  )
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Row,
+                {
+                  style: _styles2.default.row,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 412
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 413
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-github",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 414
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 415
+                      }
+                    },
+                    "logo-github"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 419
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-whatsapp",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 420
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 421
+                      }
+                    },
+                    "logo-whatsapp"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 425
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-wordpress",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 426
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 427
+                      }
+                    },
+                    "logo-wordpress"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 431
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "logo-youtube",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 432
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 433
+                      }
+                    },
+                    "logo-youtube"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Col,
+                  {
+                    style: _styles2.default.col,
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 437
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "mail",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 438
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      numberOfLines: 1,
+                      style: _styles2.default.iconText,
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 439
+                      }
+                    },
+                    "mail"
+                  )
+                )
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return State;
+  }(_react2.Component));
+
+  exports.default = State;
+});

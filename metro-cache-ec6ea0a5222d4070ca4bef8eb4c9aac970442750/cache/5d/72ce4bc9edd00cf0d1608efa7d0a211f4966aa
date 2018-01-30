@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/assets/contacts",
+		"width": 658,
+		"height": 725,
+		"scales": [1],
+		"hash": "afc2495625384b34f41441c21490c3f7",
+		"name": "pratik",
+		"type": "png"
+	});
+});

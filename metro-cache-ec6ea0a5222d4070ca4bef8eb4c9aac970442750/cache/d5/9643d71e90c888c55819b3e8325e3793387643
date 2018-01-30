@@ -1,0 +1,768 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  var _jsxFileName = "/var/www/mobile/SDCAConnectMobile/src/App.js";
+
+  var _react = require(_dependencyMap[0], "react");
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _nativeBase = require(_dependencyMap[1], "native-base");
+
+  var _reactNavigation = require(_dependencyMap[2], "react-navigation");
+
+  var _pendingtasks = require(_dependencyMap[3], "./screens/pendingtasks");
+
+  var _pendingtasks2 = _interopRequireDefault(_pendingtasks);
+
+  var _Header = require(_dependencyMap[4], "./screens/Header/");
+
+  var _Header2 = _interopRequireDefault(_Header);
+
+  var _ = require(_dependencyMap[5], "./screens/Header/1");
+
+  var _2 = _interopRequireDefault(_);
+
+  var _3 = require(_dependencyMap[6], "./screens/Header/2");
+
+  var _4 = _interopRequireDefault(_3);
+
+  var _5 = require(_dependencyMap[7], "./screens/Header/3");
+
+  var _6 = _interopRequireDefault(_5);
+
+  var _7 = require(_dependencyMap[8], "./screens/Header/4");
+
+  var _8 = _interopRequireDefault(_7);
+
+  var _9 = require(_dependencyMap[9], "./screens/Header/5");
+
+  var _10 = _interopRequireDefault(_9);
+
+  var _11 = require(_dependencyMap[10], "./screens/Header/6");
+
+  var _12 = _interopRequireDefault(_11);
+
+  var _13 = require(_dependencyMap[11], "./screens/Header/7");
+
+  var _14 = _interopRequireDefault(_13);
+
+  var _15 = require(_dependencyMap[12], "./screens/Header/8");
+
+  var _16 = _interopRequireDefault(_15);
+
+  var _basicFooter = require(_dependencyMap[13], "./screens/footer/basicFooter");
+
+  var _basicFooter2 = _interopRequireDefault(_basicFooter);
+
+  var _iconFooter = require(_dependencyMap[14], "./screens/footer/iconFooter");
+
+  var _iconFooter2 = _interopRequireDefault(_iconFooter);
+
+  var _iconText = require(_dependencyMap[15], "./screens/footer/iconText");
+
+  var _iconText2 = _interopRequireDefault(_iconText);
+
+  var _badgeFooter = require(_dependencyMap[16], "./screens/footer/badgeFooter");
+
+  var _badgeFooter2 = _interopRequireDefault(_badgeFooter);
+
+  var _default = require(_dependencyMap[17], "./screens/button/default");
+
+  var _default2 = _interopRequireDefault(_default);
+
+  var _outline = require(_dependencyMap[18], "./screens/button/outline");
+
+  var _outline2 = _interopRequireDefault(_outline);
+
+  var _rounded = require(_dependencyMap[19], "./screens/button/rounded");
+
+  var _rounded2 = _interopRequireDefault(_rounded);
+
+  var _block = require(_dependencyMap[20], "./screens/button/block");
+
+  var _block2 = _interopRequireDefault(_block);
+
+  var _full = require(_dependencyMap[21], "./screens/button/full");
+
+  var _full2 = _interopRequireDefault(_full);
+
+  var _custom = require(_dependencyMap[22], "./screens/button/custom");
+
+  var _custom2 = _interopRequireDefault(_custom);
+
+  var _transparent = require(_dependencyMap[23], "./screens/button/transparent");
+
+  var _transparent2 = _interopRequireDefault(_transparent);
+
+  var _iconBtn = require(_dependencyMap[24], "./screens/button/iconBtn");
+
+  var _iconBtn2 = _interopRequireDefault(_iconBtn);
+
+  var _disabled = require(_dependencyMap[25], "./screens/button/disabled");
+
+  var _disabled2 = _interopRequireDefault(_disabled);
+
+  var _basic = require(_dependencyMap[26], "./screens/card/basic");
+
+  var _basic2 = _interopRequireDefault(_basic);
+
+  var _cardImage = require(_dependencyMap[27], "./screens/card/card-image");
+
+  var _cardImage2 = _interopRequireDefault(_cardImage);
+
+  var _cardShowcase = require(_dependencyMap[28], "./screens/card/card-showcase");
+
+  var _cardShowcase2 = _interopRequireDefault(_cardShowcase);
+
+  var _cardList = require(_dependencyMap[29], "./screens/card/card-list");
+
+  var _cardList2 = _interopRequireDefault(_cardList);
+
+  var _cardHeaderAndFooter = require(_dependencyMap[30], "./screens/card/card-header-and-footer");
+
+  var _cardHeaderAndFooter2 = _interopRequireDefault(_cardHeaderAndFooter);
+
+  var _basic3 = require(_dependencyMap[31], "./screens/fab/basic");
+
+  var _basic4 = _interopRequireDefault(_basic3);
+
+  var _multiple = require(_dependencyMap[32], "./screens/fab/multiple");
+
+  var _multiple2 = _interopRequireDefault(_multiple);
+
+  var _fixedLabel = require(_dependencyMap[33], "./screens/form/fixedLabel");
+
+  var _fixedLabel2 = _interopRequireDefault(_fixedLabel);
+
+  var _inlineLabel = require(_dependencyMap[34], "./screens/form/inlineLabel");
+
+  var _inlineLabel2 = _interopRequireDefault(_inlineLabel);
+
+  var _floatingLabel = require(_dependencyMap[35], "./screens/form/floatingLabel");
+
+  var _floatingLabel2 = _interopRequireDefault(_floatingLabel);
+
+  var _placeholder = require(_dependencyMap[36], "./screens/form/placeholder");
+
+  var _placeholder2 = _interopRequireDefault(_placeholder);
+
+  var _stacked = require(_dependencyMap[37], "./screens/form/stacked");
+
+  var _stacked2 = _interopRequireDefault(_stacked);
+
+  var _regular = require(_dependencyMap[38], "./screens/form/regular");
+
+  var _regular2 = _interopRequireDefault(_regular);
+
+  var _underline = require(_dependencyMap[39], "./screens/form/underline");
+
+  var _underline2 = _interopRequireDefault(_underline);
+
+  var _rounded3 = require(_dependencyMap[40], "./screens/form/rounded");
+
+  var _rounded4 = _interopRequireDefault(_rounded3);
+
+  var _iconInput = require(_dependencyMap[41], "./screens/form/iconInput");
+
+  var _iconInput2 = _interopRequireDefault(_iconInput);
+
+  var _success = require(_dependencyMap[42], "./screens/form/success");
+
+  var _success2 = _interopRequireDefault(_success);
+
+  var _error = require(_dependencyMap[43], "./screens/form/error");
+
+  var _error2 = _interopRequireDefault(_error);
+
+  var _disabledInput = require(_dependencyMap[44], "./screens/form/disabledInput");
+
+  var _disabledInput2 = _interopRequireDefault(_disabledInput);
+
+  var _row = require(_dependencyMap[45], "./screens/layout/row");
+
+  var _row2 = _interopRequireDefault(_row);
+
+  var _column = require(_dependencyMap[46], "./screens/layout/column");
+
+  var _column2 = _interopRequireDefault(_column);
+
+  var _nested = require(_dependencyMap[47], "./screens/layout/nested");
+
+  var _nested2 = _interopRequireDefault(_nested);
+
+  var _customRow = require(_dependencyMap[48], "./screens/layout/customRow");
+
+  var _customRow2 = _interopRequireDefault(_customRow);
+
+  var _customCol = require(_dependencyMap[49], "./screens/layout/customCol");
+
+  var _customCol2 = _interopRequireDefault(_customCol);
+
+  var _basicListSwipe = require(_dependencyMap[50], "./screens/listSwipe/basic-list-swipe");
+
+  var _basicListSwipe2 = _interopRequireDefault(_basicListSwipe);
+
+  var _multiListSwipe = require(_dependencyMap[51], "./screens/listSwipe/multi-list-swipe");
+
+  var _multiListSwipe2 = _interopRequireDefault(_multiListSwipe);
+
+  var _basicList = require(_dependencyMap[52], "./screens/list/basic-list");
+
+  var _basicList2 = _interopRequireDefault(_basicList);
+
+  var _listDivider = require(_dependencyMap[53], "./screens/list/list-divider");
+
+  var _listDivider2 = _interopRequireDefault(_listDivider);
+
+  var _listSeparator = require(_dependencyMap[54], "./screens/list/list-separator");
+
+  var _listSeparator2 = _interopRequireDefault(_listSeparator);
+
+  var _listHeaders = require(_dependencyMap[55], "./screens/list/list-headers");
+
+  var _listHeaders2 = _interopRequireDefault(_listHeaders);
+
+  var _listIcon = require(_dependencyMap[56], "./screens/list/list-icon");
+
+  var _listIcon2 = _interopRequireDefault(_listIcon);
+
+  var _listAvatar = require(_dependencyMap[57], "./screens/list/list-avatar");
+
+  var _listAvatar2 = _interopRequireDefault(_listAvatar);
+
+  var _listThumbnail = require(_dependencyMap[58], "./screens/list/list-thumbnail");
+
+  var _listThumbnail2 = _interopRequireDefault(_listThumbnail);
+
+  var _regularPicker = require(_dependencyMap[59], "./screens/picker/regularPicker");
+
+  var _regularPicker2 = _interopRequireDefault(_regularPicker);
+
+  var _placeholderPicker = require(_dependencyMap[60], "./screens/picker/placeholderPicker");
+
+  var _placeholderPicker2 = _interopRequireDefault(_placeholderPicker);
+
+  var _placeholderPickernote = require(_dependencyMap[61], "./screens/picker/placeholderPickernote");
+
+  var _placeholderPickernote2 = _interopRequireDefault(_placeholderPickernote);
+
+  var _backButtonPicker = require(_dependencyMap[62], "./screens/picker/backButtonPicker");
+
+  var _backButtonPicker2 = _interopRequireDefault(_backButtonPicker);
+
+  var _headerPicker = require(_dependencyMap[63], "./screens/picker/headerPicker");
+
+  var _headerPicker2 = _interopRequireDefault(_headerPicker);
+
+  var _headerStylePicker = require(_dependencyMap[64], "./screens/picker/headerStylePicker");
+
+  var _headerStylePicker2 = _interopRequireDefault(_headerStylePicker);
+
+  var _customHeaderPicker = require(_dependencyMap[65], "./screens/picker/customHeaderPicker");
+
+  var _customHeaderPicker2 = _interopRequireDefault(_customHeaderPicker);
+
+  var _basicTab = require(_dependencyMap[66], "./screens/tab/basicTab");
+
+  var _basicTab2 = _interopRequireDefault(_basicTab);
+
+  var _configTab = require(_dependencyMap[67], "./screens/tab/configTab");
+
+  var _configTab2 = _interopRequireDefault(_configTab);
+
+  var _scrollableTab = require(_dependencyMap[68], "./screens/tab/scrollableTab");
+
+  var _scrollableTab2 = _interopRequireDefault(_scrollableTab);
+
+  var _SegmentHeader = require(_dependencyMap[69], "./screens/segment/SegmentHeader");
+
+  var _SegmentHeader2 = _interopRequireDefault(_SegmentHeader);
+
+  var _regular3 = require(_dependencyMap[70], "./screens/actionsheet/regular");
+
+  var _regular4 = _interopRequireDefault(_regular3);
+
+  var _icon = require(_dependencyMap[71], "./screens/actionsheet/icon");
+
+  var _icon2 = _interopRequireDefault(_icon);
+
+  var _segmentTab = require(_dependencyMap[72], "./screens/segment/segmentTab");
+
+  var _segmentTab2 = _interopRequireDefault(_segmentTab);
+
+  var _simple = require(_dependencyMap[73], "./screens/deckswiper/simple");
+
+  var _simple2 = _interopRequireDefault(_simple);
+
+  var _advanced = require(_dependencyMap[74], "./screens/deckswiper/advanced");
+
+  var _advanced2 = _interopRequireDefault(_advanced);
+
+  var _home = require(_dependencyMap[75], "./screens/home/");
+
+  var _home2 = _interopRequireDefault(_home);
+
+  var _anatomy = require(_dependencyMap[76], "./screens/anatomy/");
+
+  var _anatomy2 = _interopRequireDefault(_anatomy);
+
+  var _footer = require(_dependencyMap[77], "./screens/footer/");
+
+  var _footer2 = _interopRequireDefault(_footer);
+
+  var _badge = require(_dependencyMap[78], "./screens/badge/");
+
+  var _badge2 = _interopRequireDefault(_badge);
+
+  var _button = require(_dependencyMap[79], "./screens/button/");
+
+  var _button2 = _interopRequireDefault(_button);
+
+  var _card = require(_dependencyMap[80], "./screens/card/");
+
+  var _card2 = _interopRequireDefault(_card);
+
+  var _checkbox = require(_dependencyMap[81], "./screens/checkbox/");
+
+  var _checkbox2 = _interopRequireDefault(_checkbox);
+
+  var _deckswiper = require(_dependencyMap[82], "./screens/deckswiper/");
+
+  var _deckswiper2 = _interopRequireDefault(_deckswiper);
+
+  var _fab = require(_dependencyMap[83], "./screens/fab/");
+
+  var _fab2 = _interopRequireDefault(_fab);
+
+  var _form = require(_dependencyMap[84], "./screens/form/");
+
+  var _form2 = _interopRequireDefault(_form);
+
+  var _textArea = require(_dependencyMap[85], "./screens/form/textArea");
+
+  var _textArea2 = _interopRequireDefault(_textArea);
+
+  var _icon3 = require(_dependencyMap[86], "./screens/icon/");
+
+  var _icon4 = _interopRequireDefault(_icon3);
+
+  var _listSwipe = require(_dependencyMap[87], "./screens/listSwipe/");
+
+  var _listSwipe2 = _interopRequireDefault(_listSwipe);
+
+  var _basic5 = require(_dependencyMap[88], "./screens/icon/basic");
+
+  var _basic6 = _interopRequireDefault(_basic5);
+
+  var _state = require(_dependencyMap[89], "./screens/icon/state");
+
+  var _state2 = _interopRequireDefault(_state);
+
+  var _specific = require(_dependencyMap[90], "./screens/icon/specific");
+
+  var _specific2 = _interopRequireDefault(_specific);
+
+  var _layout = require(_dependencyMap[91], "./screens/layout/");
+
+  var _layout2 = _interopRequireDefault(_layout);
+
+  var _list = require(_dependencyMap[92], "./screens/list/");
+
+  var _list2 = _interopRequireDefault(_list);
+
+  var _radio = require(_dependencyMap[93], "./screens/radio/");
+
+  var _radio2 = _interopRequireDefault(_radio);
+
+  var _searchbar = require(_dependencyMap[94], "./screens/searchbar/");
+
+  var _searchbar2 = _interopRequireDefault(_searchbar);
+
+  var _spinner = require(_dependencyMap[95], "./screens/spinner/");
+
+  var _spinner2 = _interopRequireDefault(_spinner);
+
+  var _picker = require(_dependencyMap[96], "./screens/picker/");
+
+  var _picker2 = _interopRequireDefault(_picker);
+
+  var _tab = require(_dependencyMap[97], "./screens/tab/");
+
+  var _tab2 = _interopRequireDefault(_tab);
+
+  var _thumbnail = require(_dependencyMap[98], "./screens/thumbnail/");
+
+  var _thumbnail2 = _interopRequireDefault(_thumbnail);
+
+  var _typography = require(_dependencyMap[99], "./screens/typography/");
+
+  var _typography2 = _interopRequireDefault(_typography);
+
+  var _sidebar = require(_dependencyMap[100], "./screens/sidebar");
+
+  var _sidebar2 = _interopRequireDefault(_sidebar);
+
+  var _segment = require(_dependencyMap[101], "./screens/segment");
+
+  var _segment2 = _interopRequireDefault(_segment);
+
+  var _toast = require(_dependencyMap[102], "./screens/toast");
+
+  var _toast2 = _interopRequireDefault(_toast);
+
+  var _actionsheet = require(_dependencyMap[103], "./screens/actionsheet");
+
+  var _actionsheet2 = _interopRequireDefault(_actionsheet);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  var Drawer = (0, _reactNavigation.DrawerNavigator)({
+    PendingTasksScreen: {
+      screen: _pendingtasks2.default
+    },
+    Home: {
+      screen: _home2.default
+    },
+    Anatomy: {
+      screen: _anatomy2.default
+    },
+    Header: {
+      screen: _Header2.default
+    },
+    Footer: {
+      screen: _footer2.default
+    },
+    NHBadge: {
+      screen: _badge2.default
+    },
+    NHButton: {
+      screen: _button2.default
+    },
+    NHCard: {
+      screen: _card2.default
+    },
+    NHCheckbox: {
+      screen: _checkbox2.default
+    },
+    NHDeckSwiper: {
+      screen: _deckswiper2.default
+    },
+    NHFab: {
+      screen: _fab2.default
+    },
+    NHForm: {
+      screen: _form2.default
+    },
+    NHIcon: {
+      screen: _icon4.default
+    },
+    BasicIcon: {
+      screen: _basic6.default
+    },
+    IconState: {
+      screen: _state2.default
+    },
+    SpecificIcon: {
+      screen: _specific2.default
+    },
+    NHLayout: {
+      screen: _layout2.default
+    },
+    NHList: {
+      screen: _list2.default
+    },
+    ListSwipe: {
+      screen: _listSwipe2.default
+    },
+    NHRadio: {
+      screen: _radio2.default
+    },
+    NHSearchbar: {
+      screen: _searchbar2.default
+    },
+    NHSpinner: {
+      screen: _spinner2.default
+    },
+    NHPicker: {
+      screen: _picker2.default
+    },
+    NHTab: {
+      screen: _tab2.default
+    },
+    NHThumbnail: {
+      screen: _thumbnail2.default
+    },
+    NHTypography: {
+      screen: _typography2.default
+    },
+    Segment: {
+      screen: _segment2.default
+    },
+    Toast: {
+      screen: _toast2.default
+    },
+    Actionsheet: {
+      screen: _actionsheet2.default
+    }
+  }, {
+    initialRouteName: "Home",
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle',
+    contentOptions: {
+      activeTintColor: "#e91e63"
+    },
+    contentComponent: function contentComponent(props) {
+      return _react2.default.createElement(_sidebar2.default, _extends({}, props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149
+        }
+      }));
+    }
+  });
+  var AppNavigator = (0, _reactNavigation.StackNavigator)({
+    Drawer: {
+      screen: Drawer
+    },
+    Header1: {
+      screen: _2.default
+    },
+    Header2: {
+      screen: _4.default
+    },
+    Header3: {
+      screen: _6.default
+    },
+    Header4: {
+      screen: _8.default
+    },
+    Header5: {
+      screen: _10.default
+    },
+    Header6: {
+      screen: _12.default
+    },
+    Header7: {
+      screen: _14.default
+    },
+    Header8: {
+      screen: _16.default
+    },
+    BasicFooter: {
+      screen: _basicFooter2.default
+    },
+    IconFooter: {
+      screen: _iconFooter2.default
+    },
+    IconText: {
+      screen: _iconText2.default
+    },
+    BadgeFooter: {
+      screen: _badgeFooter2.default
+    },
+    Default: {
+      screen: _default2.default
+    },
+    Outline: {
+      screen: _outline2.default
+    },
+    Rounded: {
+      screen: _rounded2.default
+    },
+    Block: {
+      screen: _block2.default
+    },
+    Full: {
+      screen: _full2.default
+    },
+    Custom: {
+      screen: _custom2.default
+    },
+    Transparent: {
+      screen: _transparent2.default
+    },
+    IconBtn: {
+      screen: _iconBtn2.default
+    },
+    Disabled: {
+      screen: _disabled2.default
+    },
+    BasicCard: {
+      screen: _basic2.default
+    },
+    NHCardImage: {
+      screen: _cardImage2.default
+    },
+    NHCardShowcase: {
+      screen: _cardShowcase2.default
+    },
+    NHCardList: {
+      screen: _cardList2.default
+    },
+    NHCardHeaderAndFooter: {
+      screen: _cardHeaderAndFooter2.default
+    },
+    SimpleDeck: {
+      screen: _simple2.default
+    },
+    AdvancedDeck: {
+      screen: _advanced2.default
+    },
+    BasicFab: {
+      screen: _basic4.default
+    },
+    MultipleFab: {
+      screen: _multiple2.default
+    },
+    FixedLabel: {
+      screen: _fixedLabel2.default
+    },
+    InlineLabel: {
+      screen: _inlineLabel2.default
+    },
+    FloatingLabel: {
+      screen: _floatingLabel2.default
+    },
+    PlaceholderLabel: {
+      screen: _placeholder2.default
+    },
+    StackedLabel: {
+      screen: _stacked2.default
+    },
+    RegularInput: {
+      screen: _regular2.default
+    },
+    UnderlineInput: {
+      screen: _underline2.default
+    },
+    RoundedInput: {
+      screen: _rounded4.default
+    },
+    IconInput: {
+      screen: _iconInput2.default
+    },
+    SuccessInput: {
+      screen: _success2.default
+    },
+    ErrorInput: {
+      screen: _error2.default
+    },
+    DisabledInput: {
+      screen: _disabledInput2.default
+    },
+    TextArea: {
+      screen: _textArea2.default
+    },
+    RowNB: {
+      screen: _row2.default
+    },
+    ColumnNB: {
+      screen: _column2.default
+    },
+    NestedGrid: {
+      screen: _nested2.default
+    },
+    CustomRow: {
+      screen: _customRow2.default
+    },
+    CustomCol: {
+      screen: _customCol2.default
+    },
+    NHBasicList: {
+      screen: _basicList2.default
+    },
+    NHListDivider: {
+      screen: _listDivider2.default
+    },
+    NHListSeparator: {
+      screen: _listSeparator2.default
+    },
+    NHListHeader: {
+      screen: _listHeaders2.default
+    },
+    NHListIcon: {
+      screen: _listIcon2.default
+    },
+    NHListAvatar: {
+      screen: _listAvatar2.default
+    },
+    NHListThumbnail: {
+      screen: _listThumbnail2.default
+    },
+    BasicListSwipe: {
+      screen: _basicListSwipe2.default
+    },
+    MultiListSwipe: {
+      screen: _multiListSwipe2.default
+    },
+    RegularPicker: {
+      screen: _regularPicker2.default
+    },
+    PlaceholderPicker: {
+      screen: _placeholderPicker2.default
+    },
+    PlaceholderPickerNote: {
+      screen: _placeholderPickernote2.default
+    },
+    BackButtonPicker: {
+      screen: _backButtonPicker2.default
+    },
+    HeaderPicker: {
+      screen: _headerPicker2.default
+    },
+    HeaderStylePicker: {
+      screen: _headerStylePicker2.default
+    },
+    CustomHeaderPicker: {
+      screen: _customHeaderPicker2.default
+    },
+    BasicTab: {
+      screen: _basicTab2.default
+    },
+    ConfigTab: {
+      screen: _configTab2.default
+    },
+    ScrollableTab: {
+      screen: _scrollableTab2.default
+    },
+    BasicSegment: {
+      screen: _SegmentHeader2.default
+    },
+    AdvSegment: {
+      screen: _segmentTab2.default
+    },
+    RegularActionSheet: {
+      screen: _regular4.default
+    },
+    IconActionSheet: {
+      screen: _icon2.default
+    }
+  }, {
+    initialRouteName: "Drawer",
+    headerMode: "none"
+  });
+
+  exports.default = function () {
+    return _react2.default.createElement(
+      _nativeBase.Root,
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 249
+        }
+      },
+      _react2.default.createElement(AppNavigator, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 250
+        }
+      })
+    );
+  };
+});

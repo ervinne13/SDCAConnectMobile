@@ -4,11 +4,13 @@ import Login from "./src/screens/login";
 import Splashscreen from "./src/screens/splashscreen";
 import PendingTasksScreen from "./src/screens/pendingtasks";
 
+import UserAPI from './src/api/UserAPI';
+
 import Task from './src/models/Task';
 import TaskService from './src/services/TaskService';
 
 import {AsyncStorage} from "react-native";
-import {Root} from "native-base";
+import {Root, Toast} from "native-base";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,15 +22,36 @@ export default class App extends React.Component {
   }
 
   async componentDidMount() {
-    console.log('Attempting to get authentication token from storage');
+    console.log('mounted');
+
     let authenticationToken = await AsyncStorage.getItem('@Connect:AuthToken');
     if (authenticationToken) {
-      //  TODO validate auth token here
+      
       this.setState({authenticated: true});
       console.log('authenticated, will lookup user from server later');
-    }
 
-    this.setState({loading: false});
+      let userAPI = new UserAPI(await AsyncStorage.getItem('@Connect:Server'));
+      userAPI.checkToken(authenticationToken)
+        .then(() => {
+          this.setState({authenticated: true});
+          this.setState({loading: false});
+
+          this.beginSync();          
+        }).catch(err => {
+          if (err === 401) {  //  Unauthorized
+            this.setState({authenticated: false});
+          } else {
+            console.error(error);
+            throw new Error(error);
+          }        
+
+          this.setState({loading: false});
+        });
+            
+    } else {
+      this.setState({loading: false});
+    }
+    
   }
 
   async processUserInfo(userInfo) {
@@ -39,7 +62,25 @@ export default class App extends React.Component {
 
       this.setState({authenticated: true});
       console.log('Welcome ' + userInfo.display_name);
+
+      this.beginSync();
     }
+  }
+
+  async beginSync() {
+    let AuthToken = await AsyncStorage.getItem('@Connect:AuthToken');
+    let server = await AsyncStorage.getItem('@Connect:Server');
+    TaskService.beginSync(server, AuthToken)
+      .then(() => {
+        Toast.show({ text: 'Tasks Synchronized', position: 'bottom' });
+      }).catch(err => {
+        if (err === 401) {  //  Unauthorized
+          this.setState({authenticated: false});
+        } else {
+          console.error(error);
+          throw new Error(error);
+        }        
+      });
   }
 
   render() {
@@ -52,7 +93,11 @@ export default class App extends React.Component {
     } else if (!this.state.authenticated) {
       return <Login onLoginSuccess={userInfo => this.processUserInfo(userInfo)}/>;
     } else {
-      return <Setup />
+      return (
+        <Root>
+          <Setup/>
+        </Root>
+      );
     }
   }
 }

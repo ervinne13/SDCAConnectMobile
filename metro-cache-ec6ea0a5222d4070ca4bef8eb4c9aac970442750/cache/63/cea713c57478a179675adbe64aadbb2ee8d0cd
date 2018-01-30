@@ -1,0 +1,14 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var isArray = require(_dependencyMap[0], './isArray'),
+      isObjectLike = require(_dependencyMap[1], './isObjectLike');
+
+  var stringTag = '[object String]';
+  var objectProto = Object.prototype;
+  var objectToString = objectProto.toString;
+
+  function isString(value) {
+    return typeof value == 'string' || !isArray(value) && isObjectLike(value) && objectToString.call(value) == stringTag;
+  }
+
+  module.exports = isString;
+});

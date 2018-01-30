@@ -1,0 +1,64 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var Stack = require(_dependencyMap[0], './_Stack'),
+      equalArrays = require(_dependencyMap[1], './_equalArrays'),
+      equalByTag = require(_dependencyMap[2], './_equalByTag'),
+      equalObjects = require(_dependencyMap[3], './_equalObjects'),
+      getTag = require(_dependencyMap[4], './_getTag'),
+      isArray = require(_dependencyMap[5], './isArray'),
+      isHostObject = require(_dependencyMap[6], './_isHostObject'),
+      isTypedArray = require(_dependencyMap[7], './isTypedArray');
+
+  var PARTIAL_COMPARE_FLAG = 2;
+  var argsTag = '[object Arguments]',
+      arrayTag = '[object Array]',
+      objectTag = '[object Object]';
+  var objectProto = Object.prototype;
+  var hasOwnProperty = objectProto.hasOwnProperty;
+
+  function baseIsEqualDeep(object, other, equalFunc, customizer, bitmask, stack) {
+    var objIsArr = isArray(object),
+        othIsArr = isArray(other),
+        objTag = arrayTag,
+        othTag = arrayTag;
+
+    if (!objIsArr) {
+      objTag = getTag(object);
+      objTag = objTag == argsTag ? objectTag : objTag;
+    }
+
+    if (!othIsArr) {
+      othTag = getTag(other);
+      othTag = othTag == argsTag ? objectTag : othTag;
+    }
+
+    var objIsObj = objTag == objectTag && !isHostObject(object),
+        othIsObj = othTag == objectTag && !isHostObject(other),
+        isSameTag = objTag == othTag;
+
+    if (isSameTag && !objIsObj) {
+      stack || (stack = new Stack());
+      return objIsArr || isTypedArray(object) ? equalArrays(object, other, equalFunc, customizer, bitmask, stack) : equalByTag(object, other, objTag, equalFunc, customizer, bitmask, stack);
+    }
+
+    if (!(bitmask & PARTIAL_COMPARE_FLAG)) {
+      var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+          othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+      if (objIsWrapped || othIsWrapped) {
+        var objUnwrapped = objIsWrapped ? object.value() : object,
+            othUnwrapped = othIsWrapped ? other.value() : other;
+        stack || (stack = new Stack());
+        return equalFunc(objUnwrapped, othUnwrapped, customizer, bitmask, stack);
+      }
+    }
+
+    if (!isSameTag) {
+      return false;
+    }
+
+    stack || (stack = new Stack());
+    return equalObjects(object, other, equalFunc, customizer, bitmask, stack);
+  }
+
+  module.exports = baseIsEqualDeep;
+});

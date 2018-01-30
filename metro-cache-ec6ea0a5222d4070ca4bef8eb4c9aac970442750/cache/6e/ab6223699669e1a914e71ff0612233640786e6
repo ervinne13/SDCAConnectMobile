@@ -1,0 +1,18 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var Map = require(_dependencyMap[0], './_Map'),
+      assocDelete = require(_dependencyMap[1], './_assocDelete'),
+      hashDelete = require(_dependencyMap[2], './_hashDelete'),
+      isKeyable = require(_dependencyMap[3], './_isKeyable');
+
+  function mapDelete(key) {
+    var data = this.__data__;
+
+    if (isKeyable(key)) {
+      return hashDelete(typeof key == 'string' ? data.string : data.hash, key);
+    }
+
+    return Map ? data.map['delete'](key) : assocDelete(data.map, key);
+  }
+
+  module.exports = mapDelete;
+});

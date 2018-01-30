@@ -1,0 +1,159 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/var/www/mobile/SDCAConnectMobile/src/screens/tab/tabFour.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _nativeBase = require(_dependencyMap[2], "native-base");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    TabFour: {
+      displayName: "TabFour"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/var/www/mobile/SDCAConnectMobile/src/screens/tab/tabFour.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var TabFour = _wrapComponent("TabFour")(function (_Component) {
+    _inherits(TabFour, _Component);
+
+    function TabFour() {
+      _classCallCheck(this, TabFour);
+
+      return _possibleConstructorReturn(this, (TabFour.__proto__ || Object.getPrototypeOf(TabFour)).apply(this, arguments));
+    }
+
+    _createClass(TabFour, [{
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(
+          _nativeBase.Content,
+          {
+            padder: true,
+            style: {
+              marginTop: 0
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 7
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Card,
+            {
+              style: {
+                flex: 0
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 8
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.CardItem,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 9
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Body,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 10
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 11
+                    }
+                  },
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur sunt itaque adipisci quisquam pariatur qui, reiciendis architecto quod sint incidunt labore nisi totam illum numquam non magnam praesentium, maxime quaerat!"
+                )
+              )
+            )
+          ),
+          _react3.default.createElement(
+            _nativeBase.Card,
+            {
+              style: {
+                flex: 0
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 20
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.CardItem,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 21
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Body,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 22
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 23
+                    }
+                  },
+                  "NativeBase gives you the potential of building applications that run on iOS and Android using a single codebase."
+                )
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return TabFour;
+  }(_react2.Component));
+
+  exports.default = TabFour;
+});

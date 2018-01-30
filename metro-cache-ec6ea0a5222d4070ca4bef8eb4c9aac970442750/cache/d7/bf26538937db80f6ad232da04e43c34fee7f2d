@@ -1,0 +1,11 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var isArguments = require(_dependencyMap[0], './isArguments'),
+      isArray = require(_dependencyMap[1], './isArray'),
+      isArrayLikeObject = require(_dependencyMap[2], './isArrayLikeObject');
+
+  function isFlattenable(value) {
+    return isArrayLikeObject(value) && (isArray(value) || isArguments(value));
+  }
+
+  module.exports = isFlattenable;
+});

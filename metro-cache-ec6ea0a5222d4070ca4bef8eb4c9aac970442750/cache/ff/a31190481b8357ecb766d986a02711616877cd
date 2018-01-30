@@ -1,0 +1,29 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var Reflect = require(_dependencyMap[0], './_Reflect'),
+      iteratorToArray = require(_dependencyMap[1], './_iteratorToArray');
+
+  var objectProto = Object.prototype;
+  var enumerate = Reflect ? Reflect.enumerate : undefined,
+      propertyIsEnumerable = objectProto.propertyIsEnumerable;
+
+  function baseKeysIn(object) {
+    object = object == null ? object : Object(object);
+    var result = [];
+
+    for (var key in object) {
+      result.push(key);
+    }
+
+    return result;
+  }
+
+  if (enumerate && !propertyIsEnumerable.call({
+    'valueOf': 1
+  }, 'valueOf')) {
+    baseKeysIn = function baseKeysIn(object) {
+      return iteratorToArray(enumerate(object));
+    };
+  }
+
+  module.exports = baseKeysIn;
+});

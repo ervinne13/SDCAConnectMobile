@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var arrayMap = require(_dependencyMap[0], './_arrayMap'),
+      baseFlatten = require(_dependencyMap[1], './_baseFlatten'),
+      basePick = require(_dependencyMap[2], './_basePick'),
+      rest = require(_dependencyMap[3], './rest'),
+      toKey = require(_dependencyMap[4], './_toKey');
+
+  var pick = rest(function (object, props) {
+    return object == null ? {} : basePick(object, arrayMap(baseFlatten(props, 1), toKey));
+  });
+  module.exports = pick;
+});

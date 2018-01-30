@@ -1,0 +1,9 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var assocIndexOf = require(_dependencyMap[0], './_assocIndexOf');
+
+  function assocHas(array, key) {
+    return assocIndexOf(array, key) > -1;
+  }
+
+  module.exports = assocHas;
+});

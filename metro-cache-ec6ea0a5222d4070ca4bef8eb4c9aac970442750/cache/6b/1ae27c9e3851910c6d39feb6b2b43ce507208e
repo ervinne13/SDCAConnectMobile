@@ -1,0 +1,11 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var assocHas = require(_dependencyMap[0], './_assocHas');
+
+  function stackHas(key) {
+    var data = this.__data__,
+        array = data.array;
+    return array ? assocHas(array, key) : data.map.has(key);
+  }
+
+  module.exports = stackHas;
+});

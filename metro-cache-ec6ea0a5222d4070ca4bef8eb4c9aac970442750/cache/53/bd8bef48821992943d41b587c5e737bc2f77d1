@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/assets",
+    "width": 282,
+    "height": 498,
+    "scales": [1],
+    "hash": "48e3232e0dcb870d1efba5cc4fbe80b1",
+    "name": "splashscreen",
+    "type": "png"
+  });
+});

@@ -1,0 +1,516 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/var/www/mobile/SDCAConnectMobile/src/screens/card/card-list.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _nativeBase = require(_dependencyMap[2], "native-base");
+
+  var _styles = require(_dependencyMap[3], "./styles");
+
+  var _styles2 = _interopRequireDefault(_styles);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    NHCardList: {
+      displayName: "NHCardList"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/var/www/mobile/SDCAConnectMobile/src/screens/card/card-list.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var NHCardList = _wrapComponent("NHCardList")(function (_Component) {
+    _inherits(NHCardList, _Component);
+
+    function NHCardList() {
+      _classCallCheck(this, NHCardList);
+
+      return _possibleConstructorReturn(this, (NHCardList.__proto__ || Object.getPrototypeOf(NHCardList)).apply(this, arguments));
+    }
+
+    _createClass(NHCardList, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react3.default.createElement(
+          _nativeBase.Container,
+          {
+            style: _styles2.default.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 21
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Header,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 22
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Left,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 23
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  transparent: true,
+                  onPress: function onPress() {
+                    return _this2.props.navigation.goBack();
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 24
+                  }
+                },
+                _react3.default.createElement(_nativeBase.Icon, {
+                  name: "arrow-back",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 25
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 28
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Title,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 29
+                  }
+                },
+                "Card List"
+              )
+            ),
+            _react3.default.createElement(_nativeBase.Right, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 31
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.Content,
+            {
+              padder: true,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 34
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Card,
+              {
+                style: _styles2.default.mb,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 35
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  header: true,
+                  bordered: true,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 36
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 37
+                    }
+                  },
+                  "Social Applications"
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 39
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 40
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-googleplus",
+                    style: {
+                      color: "#DD5044"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 41
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 46
+                      }
+                    },
+                    "Google Plus"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 48
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 49
+                    }
+                  })
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 52
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 53
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-facebook",
+                    style: {
+                      color: "#3B579D"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 54
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 59
+                      }
+                    },
+                    "facebook"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 61
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 62
+                    }
+                  })
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 65
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 66
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-twitter",
+                    style: {
+                      color: "#55ACEE"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 67
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 68
+                      }
+                    },
+                    "Twitter"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 70
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 71
+                    }
+                  })
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 74
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 75
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-reddit",
+                    style: {
+                      color: "#FF4500"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 76
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 77
+                      }
+                    },
+                    "Reddit"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 79
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 80
+                    }
+                  })
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 83
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 84
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-linkedin",
+                    style: {
+                      color: "#007BB6"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 85
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 90
+                      }
+                    },
+                    "LinkedIn"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 92
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 93
+                    }
+                  })
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.CardItem,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 96
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Left,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 97
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    active: true,
+                    name: "logo-youtube",
+                    style: {
+                      color: "#D62727"
+                    },
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 98
+                    }
+                  }),
+                  _react3.default.createElement(
+                    _nativeBase.Text,
+                    {
+                      __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 99
+                      }
+                    },
+                    "YouTube"
+                  )
+                ),
+                _react3.default.createElement(
+                  _nativeBase.Right,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 101
+                    }
+                  },
+                  _react3.default.createElement(_nativeBase.Icon, {
+                    name: "arrow-forward",
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 102
+                    }
+                  })
+                )
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return NHCardList;
+  }(_react2.Component));
+
+  exports.default = NHCardList;
+});

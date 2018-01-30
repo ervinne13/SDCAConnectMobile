@@ -1,0 +1,16 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var arrayReduce = require(_dependencyMap[0], './_arrayReduce');
+
+  function basePick(object, props) {
+    object = Object(object);
+    return arrayReduce(props, function (result, key) {
+      if (key in object) {
+        result[key] = object[key];
+      }
+
+      return result;
+    }, {});
+  }
+
+  module.exports = basePick;
+});

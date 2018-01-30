@@ -1,0 +1,18 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  var Map = require(_dependencyMap[0], './_Map'),
+      assocGet = require(_dependencyMap[1], './_assocGet'),
+      hashGet = require(_dependencyMap[2], './_hashGet'),
+      isKeyable = require(_dependencyMap[3], './_isKeyable');
+
+  function mapGet(key) {
+    var data = this.__data__;
+
+    if (isKeyable(key)) {
+      return hashGet(typeof key == 'string' ? data.string : data.hash, key);
+    }
+
+    return Map ? data.map.get(key) : assocGet(data.map, key);
+  }
+
+  module.exports = mapGet;
+});

@@ -1,0 +1,12 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/assets",
+    "width": 828,
+    "height": 458,
+    "scales": [1],
+    "hash": "a21012ec04f5fa1dbeeffec5e9dbe354",
+    "name": "drawer-cover",
+    "type": "png"
+  });
+});

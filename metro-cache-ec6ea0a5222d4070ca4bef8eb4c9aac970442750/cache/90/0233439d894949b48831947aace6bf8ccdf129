@@ -1,0 +1,22 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var React = require(_dependencyMap[0], "react-native");
+
+  var Dimensions = React.Dimensions,
+      Platform = React.Platform;
+  var deviceHeight = Dimensions.get("window").height;
+  exports.default = {
+    container: {
+      flex: 1,
+      width: null,
+      height: null,
+      backgroundColor: '#E1E1E1'
+    },
+    content: {
+      alignItems: 'center'
+    }
+  };
+});

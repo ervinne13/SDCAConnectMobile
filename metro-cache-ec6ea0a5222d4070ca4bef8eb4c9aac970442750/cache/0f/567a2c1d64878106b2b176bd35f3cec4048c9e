@@ -1,0 +1,509 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/var/www/mobile/SDCAConnectMobile/src/screens/fab/multiple.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _nativeBase = require(_dependencyMap[2], "native-base");
+
+  var _styles = require(_dependencyMap[3], "./styles");
+
+  var _styles2 = _interopRequireDefault(_styles);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    MultipleFab: {
+      displayName: "MultipleFab"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/var/www/mobile/SDCAConnectMobile/src/screens/fab/multiple.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var MultipleFab = _wrapComponent("MultipleFab")(function (_Component) {
+    _inherits(MultipleFab, _Component);
+
+    function MultipleFab(props) {
+      _classCallCheck(this, MultipleFab);
+
+      var _this = _possibleConstructorReturn(this, (MultipleFab.__proto__ || Object.getPrototypeOf(MultipleFab)).call(this, props));
+
+      _this.state = {
+        active: false,
+        active1: false,
+        active2: false,
+        active3: false
+      };
+      return _this;
+    }
+
+    _createClass(MultipleFab, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react3.default.createElement(
+          _nativeBase.Container,
+          {
+            style: _styles2.default.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            }
+          },
+          _react3.default.createElement(
+            _nativeBase.Header,
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 30
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Left,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 31
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  transparent: true,
+                  onPress: function onPress() {
+                    return _this2.props.navigation.goBack();
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 32
+                  }
+                },
+                _react3.default.createElement(_nativeBase.Icon, {
+                  name: "arrow-back",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 33
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Body,
+              {
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 36
+                }
+              },
+              _react3.default.createElement(
+                _nativeBase.Title,
+                {
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 37
+                  }
+                },
+                "Multiple FABs"
+              )
+            ),
+            _react3.default.createElement(_nativeBase.Right, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 39
+              }
+            })
+          ),
+          _react3.default.createElement(
+            _nativeBase.View,
+            {
+              style: {
+                flex: 1
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 42
+              }
+            },
+            _react3.default.createElement(
+              _nativeBase.Fab,
+              {
+                active: this.state.active,
+                direction: "up",
+                containerStyle: {},
+                style: {
+                  backgroundColor: "#5067FF"
+                },
+                position: "bottomRight",
+                onPress: function onPress() {
+                  return _this2.setState({
+                    active: !_this2.state.active
+                  });
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 43
+                }
+              },
+              _react3.default.createElement(_nativeBase.IconNB, {
+                name: "md-share",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 51
+                }
+              }),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#34A34F"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 52
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-whatsapp",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 53
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#3B5998"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 55
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-facebook",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 56
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  disabled: true,
+                  style: {
+                    backgroundColor: "#DD5144"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 58
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "ios-mail",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 59
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Fab,
+              {
+                active: this.state.active1,
+                direction: "left",
+                containerStyle: {},
+                style: {
+                  backgroundColor: "#5067FF"
+                },
+                position: "topRight",
+                onPress: function onPress() {
+                  return _this2.setState({
+                    active1: !_this2.state.active1
+                  });
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 62
+                }
+              },
+              _react3.default.createElement(_nativeBase.IconNB, {
+                name: "md-share",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 70
+                }
+              }),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#34A34F"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 71
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-whatsapp",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 72
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#3B5998"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 74
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-facebook",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 75
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  disabled: true,
+                  style: {
+                    backgroundColor: "#DD5144"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 77
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "ios-mail",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 78
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Fab,
+              {
+                active: this.state.active2,
+                direction: "down",
+                containerStyle: {},
+                style: {
+                  backgroundColor: "#5067FF"
+                },
+                position: "topLeft",
+                onPress: function onPress() {
+                  return _this2.setState({
+                    active2: !_this2.state.active2
+                  });
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 81
+                }
+              },
+              _react3.default.createElement(_nativeBase.IconNB, {
+                name: "md-share",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 89
+                }
+              }),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#34A34F"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 90
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-whatsapp",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 91
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#3B5998"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 93
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-facebook",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 94
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  disabled: true,
+                  style: {
+                    backgroundColor: "#DD5144"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 96
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "ios-mail",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 97
+                  }
+                })
+              )
+            ),
+            _react3.default.createElement(
+              _nativeBase.Fab,
+              {
+                active: this.state.active3,
+                direction: "right",
+                containerStyle: {},
+                style: {
+                  backgroundColor: "#5067FF"
+                },
+                position: "bottomLeft",
+                onPress: function onPress() {
+                  return _this2.setState({
+                    active3: !_this2.state.active3
+                  });
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 100
+                }
+              },
+              _react3.default.createElement(_nativeBase.IconNB, {
+                name: "md-share",
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 108
+                }
+              }),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#34A34F"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 109
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-whatsapp",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 110
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#3B5998"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 112
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "logo-facebook",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 113
+                  }
+                })
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  disabled: true,
+                  style: {
+                    backgroundColor: "#DD5144"
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 115
+                  }
+                },
+                _react3.default.createElement(_nativeBase.IconNB, {
+                  name: "ios-mail",
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 116
+                  }
+                })
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return MultipleFab;
+  }(_react2.Component));
+
+  exports.default = MultipleFab;
+});

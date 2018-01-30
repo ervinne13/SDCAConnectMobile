@@ -1,0 +1,17 @@
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = {
+    container: {
+      backgroundColor: "#FFF"
+    },
+    text: {
+      alignSelf: "center",
+      marginBottom: 7
+    },
+    mb: {
+      marginBottom: 15
+    }
+  };
+});
