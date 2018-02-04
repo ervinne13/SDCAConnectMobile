@@ -29,6 +29,8 @@ class PendingTaskScreen extends Component {
 
     let task = this.props.navigation.state.params.task;
 
+    console.log(this.props.navigation.state);
+
     return (
       <Container style={styles.container}>
         <Header>

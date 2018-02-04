@@ -40,6 +40,9 @@ class PendingTasksScreen extends Component {
     this.state = {
       dataSource: ds.cloneWithRows(tasks)
     };
+
+    console.log(this.props.navigation.state);
+
   }
 
   render() {
