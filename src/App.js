@@ -12,6 +12,8 @@ import PendingTaskScreen from "./screens/pendingtask";
 import Home from "./screens/home/";
 import SideBar from "./screens/sidebar";
 
+import TaskListItemView from './screens/pendingtasks/TaskListItemView'
+
 //  API
 import UserAPI from './api/UserAPI';
 
@@ -42,6 +44,8 @@ const Drawer = DrawerNavigator(
 const AppNavigator = StackNavigator(
   {
     Drawer: { screen: Drawer },
+    PendingTasksScreen: { screen: PendingTasksScreen},
+    PendingTaskScreen: {screen: PendingTaskScreen}
   },
   {
     initialRouteName: "Drawer",

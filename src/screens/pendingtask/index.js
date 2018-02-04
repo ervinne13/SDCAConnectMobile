@@ -18,7 +18,17 @@ import {
 import styles from "./styles";
 
 class PendingTaskScreen extends Component {
+
+  constructor(props) {
+    super(props);
+
+    console.log(props.navigation);
+  }
+
   render() {
+
+    let task = this.props.navigation.state.params.task;
+
     return (
       <Container style={styles.container}>
         <Header>
@@ -28,7 +38,7 @@ class PendingTaskScreen extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Pending Tasks</Title>
+            <Title>{task.displayName}</Title>
           </Body>
           <Right/>
         </Header>

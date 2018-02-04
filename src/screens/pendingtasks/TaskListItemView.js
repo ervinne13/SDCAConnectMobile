@@ -9,7 +9,7 @@ import {
 } from "native-base";
 
 class TaskListItemView extends Component {
-  render() {
+  render() {    
 
     let task = this.props.task;
     let typeDisplay = '';

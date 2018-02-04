@@ -54,7 +54,9 @@ class PendingTasksScreen extends Component {
             </Button>
           </Left>
           <Body>
-            <Title>Pending Tasks</Title>
+            <View>
+              <Title>Pending Tasks</Title>
+            </View>
           </Body>
           <Right/>
         </Header>
