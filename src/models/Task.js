@@ -9,8 +9,8 @@ class Task {
     this.typeCode = webTask.type_code;
     this.displayName = webTask.display_name;
     this.description = webTask.description;    
-    this.createdAt = webTask.created_at;
-    this.updatedAt = webTask.updated_at;
+    this.createdAt = new Date(webTask.created_at);
+    this.updatedAt = new Date(webTask.updated_at);
 
     this.items = [];
 

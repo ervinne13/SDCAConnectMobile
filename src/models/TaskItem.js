@@ -10,8 +10,8 @@ class TaskItem {
     this.text = webTaskItem.task_item_text;
     this.choices = webTaskItem.choices_json;
     this.correctAnswer = webTaskItem.correct_answer_free_field;
-    this.createdAt = webTaskItem.created_at;
-    this.updatedAt = webTaskItem.updated_at;
+    this.createdAt = new Date(webTaskItem.created_at);
+    this.updatedAt = new Date(webTaskItem.updated_at);
   }
 }
 

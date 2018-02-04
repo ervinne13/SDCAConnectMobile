@@ -7,9 +7,11 @@ class TaskAPI {
     this.authToken = authToken;
   }
 
-  async getTasks() {
+  async getTasks() {    
     let url = this.server + '/api/v1/mobile/tasks';
     url += '?token=' + this.authToken;
+
+    console.log('Getting tasks: ', url);
 
     let response = await fetch(url);
 

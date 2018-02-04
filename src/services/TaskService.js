@@ -13,6 +13,8 @@ const TaskService = {
     let api = new TaskAPI(server, authToken);
     let webTasks = await api.getTasks(); //  TODO: add date filtering
 
+    console.log('Tasks Fetched', webTasks);
+
     if (!webTasks.length) {
       console.log('No tasks available');
       return;
