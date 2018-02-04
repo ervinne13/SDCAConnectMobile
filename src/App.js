@@ -8,6 +8,7 @@ import { StackNavigator, DrawerNavigator } from "react-navigation";
 import Login from "./screens/login";
 import Splashscreen from "./screens/splashscreen";
 import PendingTasksScreen from "./screens/pendingtasks";
+import PendingTaskScreen from "./screens/pendingtask";
 import Home from "./screens/home/";
 import SideBar from "./screens/sidebar";
 
@@ -16,12 +17,15 @@ import UserAPI from './api/UserAPI';
 
 //  Models
 import Task from './models/Task';
+
+//  Services
 import TaskService from './services/TaskService';
 
 const Drawer = DrawerNavigator(
-  {
-    PendingTasksScreen: { screen: PendingTasksScreen},
+  {    
     Home: { screen: Home },
+    PendingTasksScreen: { screen: PendingTasksScreen},
+    PendingTaskScreen: {screen: PendingTaskScreen},
   },
   {
     initialRouteName: "Home",
