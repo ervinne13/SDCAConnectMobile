@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import {
   Container,
   Header,
@@ -11,7 +11,8 @@ import {
   FooterTab,
   Left,
   Right,
-  Body
+  Body,
+  View
 } from "native-base";
 
 import styles from "./styles";
@@ -24,19 +25,20 @@ class PendingTasksScreen extends Component {
           <Left>
             <Button
               transparent
-              onPress={() => this.props.navigation.navigate("DrawerOpen")}
-            >
-              <Icon name="ios-menu" />
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+              <Icon name="ios-menu"/>
             </Button>
           </Left>
           <Body>
             <Title>Pending Tasks</Title>
           </Body>
-          <Right />
+          <Right/>
         </Header>
 
         <Content padder>
-          <Text>Content goes here</Text>
+          <View>
+            <Text>Content goes here</Text>
+          </View>
         </Content>
 
         <Footer>

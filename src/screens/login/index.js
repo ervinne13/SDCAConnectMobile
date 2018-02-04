@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Root, Toast } from "native-base";
 import {AsyncStorage} from "react-native";
 import {
   Container,
@@ -42,6 +43,10 @@ class Login extends Component {
       });
 
     console.log('server', this.state.server);
+  }
+
+  componentWillUnmount() {
+    Toast.toastInstance = null;    
   }
 
   async onLogin() {

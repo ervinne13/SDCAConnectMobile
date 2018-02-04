@@ -1,6 +1,6 @@
 //  React
 import React, { Component } from "react";
-import {Root, Toast} from "native-base";
+import { Root, Toast } from "native-base";
 import {AsyncStorage, NetInfo} from "react-native";
 import { StackNavigator, DrawerNavigator } from "react-navigation";
 
@@ -115,7 +115,8 @@ export default class App extends Component {
     let server = await AsyncStorage.getItem('@Connect:Server');
     TaskService.beginSync(server, AuthToken)
       .then(() => {
-        Toast.show({ text: 'Tasks Synchronized', position: 'bottom' });
+        //  show for 5s
+        Toast.show({ text: 'Tasks Synchronized', position: 'bottom', duration: 5000 });
       }).catch(err => {
         if (err === 401) {  //  Unauthorized
           this.setState({authenticated: false});
