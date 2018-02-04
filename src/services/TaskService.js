@@ -12,7 +12,12 @@ const TaskService = {
     console.log('Starting sync task');
     let api = new TaskAPI(server, authToken);
     let webTasks = await api.getTasks(); //  TODO: add date filtering
-    
+
+    if (!webTasks.length) {
+      console.log('No tasks available');
+      return;
+    }
+
     webTasks.forEach(webTask => {
       console.log(webTask);
       TaskService.save(new Task(webTask));
@@ -25,28 +30,37 @@ const TaskService = {
       console.log(task.id);
     });
 
-    console.log(TaskService.find(1));
-    console.log(TaskService.find(1).displayName);
-
-    let lodashTaskItems = _.values(TaskService.find(1).items);
-    console.log(lodashTaskItems);
+    if (tasks.length) {
+      let lodashTaskItems = _.values(tasks[0].items);
+      console.log(lodashTaskItems);
+    }
 
   },
 
-  find: function(id) {
-    let result = repository.objects('Task').filtered("id = '" + id + "'");
+  find: function (id) {
+    let result = repository
+      .objects('Task')
+      .filtered("id = '" + id + "'");
 
     if (result.length) {
       return result[0];
     } else {
       throw new Error('Task with id: ' + id + ' not found');
-    }    
+    }
   },
 
   findAll: function (sortBy) {
     //  false = desc
-    if (!sortBy) sortBy = [['id', false], ['displayName', true]];
-    return repository.objects('Task').sorted(sortBy);
+    if (!sortBy) 
+      sortBy = [
+        [
+          'id', false
+        ],
+        ['displayName', true]
+      ];
+    return repository
+      .objects('Task')
+      .sorted(sortBy);
   },
 
   save: function (task) {

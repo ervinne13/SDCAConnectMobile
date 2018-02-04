@@ -4,8 +4,8 @@ import {Container, Button, H2, H3, Text} from "native-base";
 
 import styles from "./styles";
 
-// const npLogo = require("../../../assets/Splash2.png");
-const npLogo = require("../../../assets/splashscreen.png");
+const npLogo = require("../../../assets/Splash2.png");
+// const npLogo = require("../../../assets/splashscreen.png");
 
 class Home extends Component {
 
@@ -48,10 +48,23 @@ class Home extends Component {
             <Button
               style={{
               backgroundColor: "#6FAF98",
-              alignSelf: "center"
+              width: '90%',
+              alignSelf: "center",
+              marginTop: 4,
             }}
               onPress={() => this.props.navigation.navigate("DrawerOpen")}>
               <Text>Click here to start</Text>
+            </Button>
+
+            <Button
+              style={{
+              backgroundColor: "#6FAF98",
+              width: '90%',
+              alignSelf: "center",
+              marginTop: 4,
+            }}
+              onPress={() => this.props.screenProps.onLogout()}>
+              <Text>Logout</Text>
             </Button>
           </View>
         </View>

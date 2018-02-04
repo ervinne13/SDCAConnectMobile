@@ -26,7 +26,7 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      server: 'http://172.16.150.229:8011',
+      server: 'http://sdca-connect.tk',
       username: null,
       password: null,
       isLoading: false,
@@ -52,10 +52,8 @@ class Login extends Component {
     try {
       let url = this.state.server + '/api/v1/login';
       let params = {
-        // username: this.state.username,
-        username: 'adolfo55',
-        // password: this.state.password
-        password: 'secret'
+        username: this.state.username,
+        password: this.state.password
       };
 
       console.log('Sending request to ' + url, params);
