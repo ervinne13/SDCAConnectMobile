@@ -5,7 +5,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _react2 = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react2);
+  var _react3 = _interopRequireDefault(_react2);
 
   var _index = require(_dependencyMap[1], "./../../../../react-transform-hmr/lib/index.js");
 
@@ -35,8 +35,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
   function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55,7 +53,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     filename: "/var/www/mobile/SDCAConnectMobile/node_modules/react-navigation/src/views/TabView/TabBarBottom.js",
     components: _components,
     locals: [module],
-    imports: [React.default]
+    imports: [_react3.default]
   });
 
   function _wrapComponent(id) {
@@ -129,7 +127,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
 
         if (typeof label === 'string') {
-          return React.createElement(
+          return _react3.default.createElement(
             _reactNative.Animated.Text,
             {
               style: [styles.label, {
@@ -140,7 +138,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               allowFontScaling: allowFontScaling,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 113
+                lineNumber: 70
               }
             },
             label
@@ -168,7 +166,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           return null;
         }
 
-        return React.createElement(_TabBarIcon2.default, {
+        return _react3.default.createElement(_TabBarIcon2.default, {
           position: position,
           navigation: navigation,
           activeTintColor: activeTintColor,
@@ -178,7 +176,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           style: showLabel && useHorizontalTabs ? {} : styles.icon,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 143
+            lineNumber: 100
           }
         });
       }, _this._renderTestIDProps = function (scene) {
@@ -211,16 +209,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
           return i;
         })));
         var tabBarStyle = [styles.tabBar, isLandscape && useHorizontalTabs ? styles.tabBarLandscape : styles.tabBarPortrait, style];
-        return React.createElement(
+        return _react3.default.createElement(
           _reactNative.Animated.View,
           {
             style: animateStyle,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 189
+              lineNumber: 146
             }
           },
-          React.createElement(
+          _react3.default.createElement(
             _SafeAreaView2.default,
             {
               style: tabBarStyle,
@@ -230,7 +228,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 190
+                lineNumber: 147
               }
             },
             routes.map(function (route, index) {
@@ -254,7 +252,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               var extraProps = _this2._renderTestIDProps(scene) || {};
               var testID = extraProps.testID,
                   accessibilityLabel = extraProps.accessibilityLabel;
-              return React.createElement(
+              return _react3.default.createElement(
                 _reactNative.TouchableWithoutFeedback,
                 {
                   key: route.key,
@@ -269,10 +267,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 214
+                    lineNumber: 171
                   }
                 },
-                React.createElement(
+                _react3.default.createElement(
                   _reactNative.Animated.View,
                   {
                     style: [styles.tab, isLandscape && useHorizontalTabs && styles.tabLandscape, !isLandscape && useHorizontalTabs && styles.tabPortrait, {
@@ -280,7 +278,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     }, tabStyle],
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 223
+                      lineNumber: 181
                     }
                   },
                   _this2._renderIcon(scene),
@@ -294,7 +292,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }]);
 
     return TabBarBottom;
-  }(React.PureComponent), _class.defaultProps = {
+  }(_react3.default.PureComponent), _class.defaultProps = {
     activeTintColor: '#3478f6',
     activeBackgroundColor: 'transparent',
     inactiveTintColor: '#929292',

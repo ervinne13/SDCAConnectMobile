@@ -142,59 +142,63 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     _createClass(IconNB, [{
+      key: "setIcon",
+      value: function setIcon(iconType) {
+        if (iconType == undefined && this.context.theme) {
+          iconType = this.context.theme["@@shoutem.theme/themeStyle"].variables.iconFamily;
+        }
+
+        switch (iconType) {
+          case "Ionicons":
+            this.Icon = _Ionicons2.default;
+            break;
+
+          case "Entypo":
+            this.Icon = _Entypo2.default;
+            break;
+
+          case "FontAwesome":
+            this.Icon = _FontAwesome2.default;
+            break;
+
+          case "Foundation":
+            this.Icon = _Foundation2.default;
+            break;
+
+          case "MaterialIcons":
+            this.Icon = _MaterialIcons2.default;
+            break;
+
+          case "MaterialCommunityIcons":
+            this.Icon = _MaterialCommunityIcons2.default;
+            break;
+
+          case "Octicons":
+            this.Icon = _Octicons2.default;
+            break;
+
+          case "Zocial":
+            this.Icon = _Zocial2.default;
+            break;
+
+          case "SimpleLineIcons":
+            this.Icon = _SimpleLineIcons2.default;
+            break;
+
+          default:
+            this.Icon = _Ionicons2.default;
+        }
+      }
+    }, {
       key: "componentWillMount",
       value: function componentWillMount() {
-        if (this.context.theme) {
-          switch (this.context.theme["@@shoutem.theme/themeStyle"].variables.iconFamily) {
-            case "Ionicons":
-              this.Icon = _Ionicons2.default;
-              break;
-
-            case "Entypo":
-              this.Icon = _Entypo2.default;
-              break;
-
-            case "Feather":
-              this.Icon = _Feather2.default;
-              break;
-
-            case "FontAwesome":
-              this.Icon = _FontAwesome2.default;
-              break;
-
-            case "Foundation":
-              this.Icon = _Foundation2.default;
-              break;
-
-            case "MaterialIcons":
-              this.Icon = _MaterialIcons2.default;
-              break;
-
-            case "MaterialCommunityIcons":
-              this.Icon = _MaterialCommunityIcons2.default;
-              break;
-
-            case "Octicons":
-              this.Icon = _Octicons2.default;
-              break;
-
-            case "Zocial":
-              this.Icon = _Zocial2.default;
-              break;
-
-            case "SimpleLineIcons":
-              this.Icon = _SimpleLineIcons2.default;
-              break;
-
-            case "EvilIcons":
-              this.Icon = _EvilIcons2.default;
-              break;
-
-            default:
-              this.Icon = _Ionicons2.default;
-          }
-        } else {
-          this.Icon = _Ionicons2.default;
+        this.setIcon(this.props.type);
+      }
+    }, {
+      key: "componentWillUpdate",
+      value: function componentWillUpdate(nextProps, nextState) {
+        if (nextProps.type && this.props.type != nextProps.type) {
+          this.setIcon(nextProps.type);
         }
       }
     }, {
@@ -209,7 +213,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }, this.props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 73
           }
         }));
       }
@@ -222,7 +226,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
     theme: _propTypes2.default.object
   };
   IconNB.propTypes = {
-    style: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number, _propTypes2.default.array])
+    style: _propTypes2.default.oneOfType([_propTypes2.default.object, _propTypes2.default.number, _propTypes2.default.array]),
+    type: _propTypes2.default.oneOf(["Ionicons", "Entypo", "FontAwesome", "Foundation", "MaterialIcons", "MaterialCommunityIcons", "Octicons", "Zocial", "SimpleLineIcons"])
   };
   var StyledIconNB = (0, _nativeBaseShoutemTheme.connectStyle)("NativeBase.IconNB", {}, _mapPropsToStyleNames2.default)(IconNB);
   exports.IconNB = StyledIconNB;

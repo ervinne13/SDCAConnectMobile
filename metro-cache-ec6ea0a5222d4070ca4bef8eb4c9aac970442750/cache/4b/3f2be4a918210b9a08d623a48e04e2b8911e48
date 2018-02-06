@@ -9,7 +9,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _react = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react);
+  var _react2 = _interopRequireDefault(_react);
 
   var _createNavigationContainer = require(_dependencyMap[1], "../createNavigationContainer");
 
@@ -27,13 +27,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _StackRouter2 = _interopRequireDefault(_StackRouter);
 
-  var _NavigatorTypes = require(_dependencyMap[5], "./NavigatorTypes");
+  var _NavigationActions = require(_dependencyMap[5], "../NavigationActions");
 
-  var _NavigatorTypes2 = _interopRequireDefault(_NavigatorTypes);
+  var _NavigationActions2 = _interopRequireDefault(_NavigationActions);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
   exports.default = function (routeConfigMap) {
     var stackConfig = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
@@ -45,7 +43,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         cardStyle = stackConfig.cardStyle,
         transitionConfig = stackConfig.transitionConfig,
         onTransitionStart = stackConfig.onTransitionStart,
-        onTransitionEnd = stackConfig.onTransitionEnd,
+        _onTransitionEnd = stackConfig.onTransitionEnd,
         navigationOptions = stackConfig.navigationOptions;
     var stackRouterConfig = {
       initialRouteName: initialRouteName,
@@ -54,17 +52,23 @@ __d(function (global, require, module, exports, _dependencyMap) {
       navigationOptions: navigationOptions
     };
     var router = (0, _StackRouter2.default)(routeConfigMap, stackRouterConfig);
-    var navigator = (0, _createNavigator2.default)(router, routeConfigMap, stackConfig, _NavigatorTypes2.default.STACK)(function (props) {
-      return React.createElement(_CardStackTransitioner2.default, _extends({}, props, {
+    var navigator = (0, _createNavigator2.default)(router, routeConfigMap, stackConfig)(function (props) {
+      return _react2.default.createElement(_CardStackTransitioner2.default, _extends({}, props, {
         headerMode: headerMode,
         mode: mode,
         cardStyle: cardStyle,
         transitionConfig: transitionConfig,
         onTransitionStart: onTransitionStart,
-        onTransitionEnd: onTransitionEnd,
+        onTransitionEnd: function onTransitionEnd(lastTransition, transition) {
+          var _props$navigation = props.navigation,
+              state = _props$navigation.state,
+              dispatch = _props$navigation.dispatch;
+          dispatch(_NavigationActions2.default.completeTransition());
+          _onTransitionEnd && _onTransitionEnd();
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 38
         }
       }));
     });

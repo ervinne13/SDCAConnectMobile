@@ -21,6 +21,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _validateScreenOptions2 = _interopRequireDefault(_validateScreenOptions);
 
+  var _getChildEventSubscriber = require(_dependencyMap[4], "../getChildEventSubscriber");
+
+  var _getChildEventSubscriber2 = _interopRequireDefault(_getChildEventSubscriber);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function applyConfig(configurer, navigationOptions, configProps) {
@@ -48,9 +52,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
       var router = Component.router;
 
       if (router) {
-        var _ref = route,
-            routes = _ref.routes,
-            index = _ref.index;
+        var routes = route.routes,
+            index = route.index;
 
         if (!route || !routes || index == null) {
           throw new Error("Expect nav state to have routes and index, " + JSON.stringify(route));
@@ -59,7 +62,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var childRoute = routes[index];
         var childNavigation = (0, _addNavigationHelpers2.default)({
           state: childRoute,
-          dispatch: dispatch
+          dispatch: dispatch,
+          addListener: (0, _getChildEventSubscriber2.default)(navigation.addListener, childRoute.key)
         });
         outputConfig = router.getScreenOptions(childNavigation, screenProps);
       }

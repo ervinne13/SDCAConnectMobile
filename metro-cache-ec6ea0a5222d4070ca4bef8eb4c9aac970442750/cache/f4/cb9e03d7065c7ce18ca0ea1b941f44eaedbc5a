@@ -278,6 +278,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
               _this3._root = _ref;
             },
+            enableEmptySections: true,
             onScroll: function onScroll(e) {
               return _this3.onScroll(e);
             },
@@ -299,7 +300,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             renderRow: this.props.renderRow,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 193
+              lineNumber: 194
             }
           }));
         }
@@ -311,7 +312,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }, this.props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 204
           }
         }), this.renderChildren());
       }

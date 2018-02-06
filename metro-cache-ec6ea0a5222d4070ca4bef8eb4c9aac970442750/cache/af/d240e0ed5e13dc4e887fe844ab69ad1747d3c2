@@ -519,8 +519,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }), this.renderFab()) : _react2.default.createElement(_reactNative.TouchableNativeFeedback, _extends({
           onPress: function onPress() {
             return _this5.fabOnPress();
-          },
-          background: this.props.androidRippleColor ? _reactNative.TouchableNativeFeedback.Ripple(this.props.androidRippleColor) : _reactNative.TouchableNativeFeedback.Ripple(_platform2.default.androidRippleColor)
+          }
         }, this.prepareFabProps(), {
           __source: {
             fileName: _jsxFileName,
@@ -530,7 +529,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           style: [this.getInitialStyle().fab, this.props.style],
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 443
+            lineNumber: 438
           }
         }, this.renderFab())));
       }

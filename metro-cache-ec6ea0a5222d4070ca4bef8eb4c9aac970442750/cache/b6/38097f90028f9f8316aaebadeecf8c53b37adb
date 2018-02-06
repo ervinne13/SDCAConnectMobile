@@ -27,14 +27,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
               case 0:
                 url = this.server + '/api/v1/mobile/tasks';
                 url += '?token=' + this.authToken;
-                _context.next = 4;
+                console.log('Getting tasks: ', url);
+                _context.next = 5;
                 return regeneratorRuntime.awrap(fetch(url));
 
-              case 4:
+              case 5:
                 response = _context.sent;
                 return _context.abrupt("return", _API2.default.handleResponse(response));
 
-              case 6:
+              case 7:
               case "end":
                 return _context.stop();
             }

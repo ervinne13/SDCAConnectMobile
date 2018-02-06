@@ -75,6 +75,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var _this = _possibleConstructorReturn(this, (NavigationContainer.__proto__ || Object.getPrototypeOf(NavigationContainer)).call(this, props));
 
         _this.subs = null;
+        _this._actionEventSubscribers = new Set();
 
         _this._handleOpenURL = function (_ref) {
           var url = _ref.url;
@@ -104,16 +105,31 @@ __d(function (global, require, module, exports, _dependencyMap) {
           (0, _invariant2.default)(oldNav, 'should be set in constructor if stateful');
           var nav = Component.router.getStateForAction(action, oldNav);
 
+          var dispatchActionEvents = function dispatchActionEvents() {
+            _this._actionEventSubscribers.forEach(function (subscriber) {
+              return subscriber({
+                type: 'action',
+                action: action,
+                state: nav,
+                lastState: oldNav
+              });
+            });
+          };
+
           if (nav && nav !== oldNav) {
             _this._nav = nav;
 
             _this.setState({
               nav: nav
             }, function () {
-              return _this._onNavigationStateChange(oldNav, nav, action);
+              _this._onNavigationStateChange(oldNav, nav, action);
+
+              dispatchActionEvents();
             });
 
             return true;
+          } else {
+            dispatchActionEvents();
           }
 
           return false;
@@ -235,16 +251,33 @@ __d(function (global, require, module, exports, _dependencyMap) {
       }, {
         key: "render",
         value: function render() {
+          var _this3 = this;
+
           var navigation = this.props.navigation;
 
           if (this._isStateful()) {
-            var _nav = this.state.nav;
-            (0, _invariant2.default)(_nav, 'should be set in constructor if stateful');
+            var nav = this.state.nav;
+            (0, _invariant2.default)(nav, 'should be set in constructor if stateful');
 
-            if (!this._navigation || this._navigation.state !== _nav) {
+            if (!this._navigation || this._navigation.state !== nav) {
               this._navigation = (0, _addNavigationHelpers2.default)({
                 dispatch: this.dispatch,
-                state: _nav
+                state: nav,
+                addListener: function addListener(eventName, handler) {
+                  if (eventName !== 'action') {
+                    return {
+                      remove: function remove() {}
+                    };
+                  }
+
+                  _this3._actionEventSubscribers.add(handler);
+
+                  return {
+                    remove: function remove() {
+                      _this3._actionEventSubscribers.delete(handler);
+                    }
+                  };
+                }
               });
             }
 
@@ -256,7 +289,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             navigation: navigation,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 212
+              lineNumber: 205
             }
           }));
         }

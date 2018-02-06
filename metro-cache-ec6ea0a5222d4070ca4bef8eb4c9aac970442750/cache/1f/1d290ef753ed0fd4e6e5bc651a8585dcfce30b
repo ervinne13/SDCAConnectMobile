@@ -5,7 +5,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _react2 = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react2);
+  var _react3 = _interopRequireDefault(_react2);
 
   var _index = require(_dependencyMap[1], "./../../../../react-transform-hmr/lib/index.js");
 
@@ -39,17 +39,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _addNavigationHelpers2 = _interopRequireDefault(_addNavigationHelpers);
 
-  var _SceneView = require(_dependencyMap[8], "../SceneView");
+  var _getChildEventSubscriber = require(_dependencyMap[8], "../../getChildEventSubscriber");
+
+  var _getChildEventSubscriber2 = _interopRequireDefault(_getChildEventSubscriber);
+
+  var _SceneView = require(_dependencyMap[9], "../SceneView");
 
   var _SceneView2 = _interopRequireDefault(_SceneView);
 
-  var _TransitionConfigs = require(_dependencyMap[9], "./TransitionConfigs");
+  var _TransitionConfigs = require(_dependencyMap[10], "./TransitionConfigs");
 
   var _TransitionConfigs2 = _interopRequireDefault(_TransitionConfigs);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
   function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -69,7 +71,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     filename: "/var/www/mobile/SDCAConnectMobile/node_modules/react-navigation/src/views/CardStack/CardStack.js",
     components: _components,
     locals: [module],
-    imports: [React.default]
+    imports: [_react3.default]
   });
 
   function _wrapComponent(id) {
@@ -120,7 +122,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
         if (!screenDetails || screenDetails.state !== scene.route) {
           var screenNavigation = (0, _addNavigationHelpers2.default)({
             dispatch: navigation.dispatch,
-            state: scene.route
+            state: scene.route,
+            addListener: (0, _getChildEventSubscriber2.default)(navigation.addListener, scene.route.key)
           });
           screenDetails = {
             state: scene.route,
@@ -144,7 +147,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
         var SceneComponent = _this.props.router.getComponentForRouteName(scene.route.routeName);
 
-        return React.createElement(
+        return _react3.default.createElement(
           _Card2.default,
           _extends({}, _this.props, {
             key: "card_" + scene.key,
@@ -152,7 +155,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             scene: scene,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 454
+              lineNumber: 407
             }
           }),
           _this._renderInnerScene(SceneComponent, scene)
@@ -185,10 +188,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
 
         var renderHeader = header || function (props) {
-          return React.createElement(_Header2.default, _extends({}, props, {
+          return _react3.default.createElement(_Header2.default, _extends({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 165
+              lineNumber: 125
             }
           }));
         };
@@ -253,7 +256,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
           if (!_this3._isResponding && backFromScene) {
             navigation.dispatch(_NavigationActions2.default.back({
-              key: backFromScene.route.key
+              key: backFromScene.route.key,
+              immediate: true
             }));
           }
         });
@@ -375,22 +379,22 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var gesturesEnabled = typeof options.gesturesEnabled === 'boolean' ? options.gesturesEnabled : _reactNative.Platform.OS === 'ios';
         var handlers = gesturesEnabled ? responder.panHandlers : {};
         var containerStyle = [styles.container, this._getTransitionConfig().containerStyle];
-        return React.createElement(
+        return _react3.default.createElement(
           _reactNative.View,
           _extends({}, handlers, {
             style: containerStyle,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 382
+              lineNumber: 340
             }
           }),
-          React.createElement(
+          _react3.default.createElement(
             _reactNative.View,
             {
               style: styles.scenes,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 383
+                lineNumber: 341
               }
             },
             scenes.map(function (s) {
@@ -424,16 +428,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var headerMode = this._getHeaderMode();
 
         if (headerMode === 'screen') {
-          return React.createElement(
+          return _react3.default.createElement(
             _reactNative.View,
             {
               style: styles.container,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 410
+                lineNumber: 365
               }
             },
-            React.createElement(
+            _react3.default.createElement(
               _reactNative.View,
               {
                 style: {
@@ -441,16 +445,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 },
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 411
+                  lineNumber: 366
                 }
               },
-              React.createElement(_SceneView2.default, {
+              _react3.default.createElement(_SceneView2.default, {
                 screenProps: screenProps,
                 navigation: navigation,
                 component: SceneComponent,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 412
+                  lineNumber: 367
                 }
               })
             ),
@@ -458,20 +462,20 @@ __d(function (global, require, module, exports, _dependencyMap) {
           );
         }
 
-        return React.createElement(_SceneView2.default, {
+        return _react3.default.createElement(_SceneView2.default, {
           screenProps: this.props.screenProps,
           navigation: navigation,
           component: SceneComponent,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 423
+            lineNumber: 378
           }
         });
       }
     }]);
 
     return CardStack;
-  }(React.Component));
+  }(_react3.default.Component));
 
   var styles = _reactNative.StyleSheet.create({
     container: {

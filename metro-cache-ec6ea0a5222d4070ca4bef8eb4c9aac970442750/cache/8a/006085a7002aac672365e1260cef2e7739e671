@@ -6,7 +6,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _react = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react);
+  var _react2 = _interopRequireDefault(_react);
 
   var _reactNative = require(_dependencyMap[1], "react-native");
 
@@ -19,8 +19,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
   var _TouchableItem2 = _interopRequireDefault(_TouchableItem);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -42,13 +40,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
         labelStyle = _ref.labelStyle,
         iconContainerStyle = _ref.iconContainerStyle,
         drawerPosition = _ref.drawerPosition;
-    return React.createElement(
+    return _react2.default.createElement(
       _reactNative.View,
       {
         style: [styles.container, itemsContainerStyle],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 27
         }
       },
       items.map(function (route, index) {
@@ -65,7 +63,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         };
         var icon = renderIcon(scene);
         var label = getLabel(scene);
-        return React.createElement(
+        return _react2.default.createElement(
           _TouchableItem2.default,
           {
             key: route.key,
@@ -78,10 +76,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
             delayPressIn: 0,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 68
+              lineNumber: 38
             }
           },
-          React.createElement(
+          _react2.default.createElement(
             _SafeAreaView2.default,
             {
               style: {
@@ -90,30 +88,30 @@ __d(function (global, require, module, exports, _dependencyMap) {
               forceInset: (_ref2 = {}, _defineProperty(_ref2, drawerPosition, 'always'), _defineProperty(_ref2, drawerPosition === 'left' ? 'right' : 'left', 'never'), _defineProperty(_ref2, "vertical", 'never'), _ref2),
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75
+                lineNumber: 45
               }
             },
-            React.createElement(
+            _react2.default.createElement(
               _reactNative.View,
               {
                 style: [styles.item, itemStyle],
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 83
+                  lineNumber: 53
                 }
               },
-              icon ? React.createElement(
+              icon ? _react2.default.createElement(
                 _reactNative.View,
                 {
                   style: [styles.icon, focused ? null : styles.inactiveIcon, iconContainerStyle],
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 85
+                    lineNumber: 55
                   }
                 },
                 icon
               ) : null,
-              typeof label === 'string' ? React.createElement(
+              typeof label === 'string' ? _react2.default.createElement(
                 _reactNative.Text,
                 {
                   style: [styles.label, {
@@ -121,7 +119,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   }, labelStyle],
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 96
+                    lineNumber: 66
                   }
                 },
                 label

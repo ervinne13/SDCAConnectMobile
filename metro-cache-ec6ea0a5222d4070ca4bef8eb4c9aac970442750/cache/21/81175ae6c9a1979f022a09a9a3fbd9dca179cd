@@ -143,7 +143,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     tabBarActiveTextColor: platform === "ios" ? "#2874F0" : "#fff",
     tabActiveBgColor: platform === "ios" ? "#cde1f9" : "#3F51B5",
     toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
-    toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
+    toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#cc4a37",
     toolbarHeight: platform === "ios" ? isIphoneX ? 88 : 64 : 56,
     toolbarIconSize: platform === "ios" ? 20 : 22,
     toolbarSearchIconSize: platform === "ios" ? 20 : 23,

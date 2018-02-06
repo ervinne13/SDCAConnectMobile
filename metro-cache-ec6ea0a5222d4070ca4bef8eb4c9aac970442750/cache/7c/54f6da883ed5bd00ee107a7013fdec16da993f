@@ -5,7 +5,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _react2 = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react2);
+  var _react3 = _interopRequireDefault(_react2);
 
   var _index = require(_dependencyMap[1], "./../../../react-transform-hmr/lib/index.js");
 
@@ -20,8 +20,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
   exports.default = createNavigator;
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -40,7 +38,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     filename: "/var/www/mobile/SDCAConnectMobile/node_modules/react-navigation/src/navigators/createNavigator.js",
     components: _components,
     locals: [module],
-    imports: [React.default]
+    imports: [_react3.default]
   });
 
   function _wrapComponent(id) {
@@ -49,7 +47,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
   }
 
-  function createNavigator(router, routeConfigs, navigatorConfig, navigatorType) {
+  function createNavigator(router, routeConfigs, navigatorConfig) {
     return function (NavigationView) {
       var _class, _temp;
 
@@ -65,18 +63,18 @@ __d(function (global, require, module, exports, _dependencyMap) {
         _createClass(Navigator, [{
           key: "render",
           value: function render() {
-            return React.createElement(NavigationView, _extends({}, this.props, {
+            return _react3.default.createElement(NavigationView, _extends({}, this.props, {
               router: router,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 52
+                lineNumber: 13
               }
             }));
           }
         }]);
 
         return Navigator;
-      }(React.Component), _class.router = router, _class.routeConfigs = routeConfigs, _class.navigatorConfig = navigatorConfig, _class.navigatorType = navigatorType, _class.navigationOptions = null, _temp));
+      }(_react3.default.Component), _class.router = router, _class.navigationOptions = null, _temp));
 
       return Navigator;
     };

@@ -36,6 +36,17 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
             case 4:
               webTasks = _context.sent;
+              console.log('Tasks Fetched', webTasks);
+
+              if (webTasks.length) {
+                _context.next = 9;
+                break;
+              }
+
+              console.log('No tasks available');
+              return _context.abrupt("return");
+
+            case 9:
               webTasks.forEach(function (webTask) {
                 console.log(webTask);
                 TaskService.save(new _Task2.default(webTask));
@@ -45,12 +56,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 console.log(task);
                 console.log(task.id);
               });
-              console.log(TaskService.find(1));
-              console.log(TaskService.find(1).displayName);
-              lodashTaskItems = _lodash2.default.values(TaskService.find(1).items);
-              console.log(lodashTaskItems);
 
-            case 12:
+              if (tasks.length) {
+                lodashTaskItems = _lodash2.default.values(tasks[0].items);
+                console.log(lodashTaskItems);
+              }
+
+            case 13:
             case "end":
               return _context.stop();
           }

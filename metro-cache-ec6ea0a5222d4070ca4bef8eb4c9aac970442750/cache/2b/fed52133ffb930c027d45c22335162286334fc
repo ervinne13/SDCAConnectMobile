@@ -19,11 +19,29 @@ __d(function (global, require, module, exports, _dependencyMap) {
           key: actualizedKey
         }));
       },
-      navigate: function navigate(routeName, params, action) {
-        return navigation.dispatch(_NavigationActions2.default.navigate({
-          routeName: routeName,
-          params: params,
-          action: action
+      navigate: function navigate(navigateTo, params, action) {
+        if (typeof navigateTo === 'string') {
+          return navigation.dispatch(_NavigationActions2.default.navigate({
+            routeName: navigateTo,
+            params: params,
+            action: action
+          }));
+        }
+
+        (0, _invariant2.default)(typeof navigateTo === 'object', 'Must navigateTo an object or a string');
+        (0, _invariant2.default)(params == null, 'Params must not be provided to .navigate() when specifying an object');
+        (0, _invariant2.default)(action == null, 'Child action must not be provided to .navigate() when specifying an object');
+        return navigation.dispatch(_NavigationActions2.default.navigate(navigateTo));
+      },
+      pop: function pop(n, params) {
+        return navigation.dispatch(_NavigationActions2.default.pop({
+          n: n,
+          immediate: params && params.immediate
+        }));
+      },
+      popToTop: function popToTop(params) {
+        return navigation.dispatch(_NavigationActions2.default.popToTop({
+          immediate: params && params.immediate
         }));
       },
       setParams: function setParams(params) {
@@ -32,6 +50,13 @@ __d(function (global, require, module, exports, _dependencyMap) {
         return navigation.dispatch(_NavigationActions2.default.setParams({
           params: params,
           key: key
+        }));
+      },
+      push: function push(routeName, params, action) {
+        return navigation.dispatch(_NavigationActions2.default.push({
+          routeName: routeName,
+          params: params,
+          action: action
         }));
       }
     });

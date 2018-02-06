@@ -206,7 +206,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 lineHeight: 30
               }, labelProps.style)
             })));
-            this.floatUp();
+            this.floatUp(-16);
           } else {
             newLabel.push(label);
             this.floatBack();
@@ -260,7 +260,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           }, iconProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 137
+              lineNumber: 139
             }
           })));
           newChildren.push(_react2.default.createElement(_reactNative.Animated.View, {
@@ -276,12 +276,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 139
+              lineNumber: 141
             }
           }, _react2.default.createElement(_Label.Label, _extends({}, labelProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 151
+              lineNumber: 153
             }
           }), this.renderLabel(label, labelProps))));
           newChildren.push(_react2.default.createElement(_Input.Input, _extends({
@@ -311,7 +311,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 155
+              lineNumber: 157
             }
           })));
         } else if (this.props.floatingLabel) {
@@ -328,12 +328,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 178
+              lineNumber: 180
             }
           }, _react2.default.createElement(_Label.Label, _extends({}, labelProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 190
+              lineNumber: 192
             }
           }), this.renderLabel(label, labelProps))));
           newChildren.push(_react2.default.createElement(_Input.Input, _extends({
@@ -367,7 +367,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 194
+              lineNumber: 196
             }
           })));
         } else if (this.props.stackedLabel && icon.length) {
@@ -380,14 +380,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 219
+              lineNumber: 221
             }
           }, _react2.default.createElement(_Icon.Icon, _extends({
             key: "s1"
           }, iconProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 227
+              lineNumber: 229
             }
           })), _react2.default.createElement(_reactNative.View, {
             style: {
@@ -395,14 +395,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 228
+              lineNumber: 230
             }
           }, _react2.default.createElement(_Label.Label, _extends({
             key: "s2"
           }, labelProps, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 229
+              lineNumber: 231
             }
           })), _react2.default.createElement(_Input.Input, _extends({
             key: "s3"
@@ -412,7 +412,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 230
+              lineNumber: 232
             }
           })))));
         } else {
@@ -452,7 +452,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           activeOpacity: 1,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 257
+            lineNumber: 265
           }
         }), this.renderChildren());
       }

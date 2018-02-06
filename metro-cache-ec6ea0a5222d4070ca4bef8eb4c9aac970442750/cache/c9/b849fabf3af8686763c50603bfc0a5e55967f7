@@ -1,13 +1,11 @@
 __d(function (global, require, module, exports, _dependencyMap) {
-  'no babel-plugin-flow-react-proptypes';
-
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
 
   var _react2 = require(_dependencyMap[0], "react");
 
-  var React = _interopRequireWildcard(_react2);
+  var _react3 = _interopRequireDefault(_react2);
 
   var _index = require(_dependencyMap[1], "./../../../../react-transform-hmr/lib/index.js");
 
@@ -45,8 +43,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
   function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -67,7 +63,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     filename: "/var/www/mobile/SDCAConnectMobile/node_modules/react-navigation/src/views/Header/Header.js",
     components: _components,
     locals: [module],
-    imports: [React.default]
+    imports: [_react3.default]
   });
 
   function _wrapComponent(id) {
@@ -97,13 +93,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
       return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Header.__proto__ || Object.getPrototypeOf(Header)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
         widths: {}
       }, _this._navigateBack = function () {
-        _this.props.navigation.goBack(null);
+        requestAnimationFrame(function () {
+          _this.props.navigation.goBack(_this.props.scene.route.key);
+        });
       }, _this._renderTitleComponent = function (props) {
         var details = _this.props.getScreenDetails(props.scene);
 
         var headerTitle = details.options.headerTitle;
 
-        if (React.isValidElement(headerTitle)) {
+        if (_react3.default.isValidElement(headerTitle)) {
           return headerTitle;
         }
 
@@ -118,7 +116,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           });
         } : undefined;
         var RenderedHeaderTitle = headerTitle && typeof headerTitle !== 'string' ? headerTitle : _HeaderTitle2.default;
-        return React.createElement(
+        return _react3.default.createElement(
           RenderedHeaderTitle,
           {
             onLayout: onLayoutIOS,
@@ -128,7 +126,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             } : null, titleStyle],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 138
+              lineNumber: 110
             }
           },
           titleString
@@ -137,7 +135,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var _this$props$getScreen = _this.props.getScreenDetails(props.scene),
             options = _this$props$getScreen.options;
 
-        if (React.isValidElement(options.headerLeft) || options.headerLeft === null) {
+        if (_react3.default.isValidElement(options.headerLeft) || options.headerLeft === null) {
           return options.headerLeft;
         }
 
@@ -151,17 +149,18 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
         var width = _this.state.widths[props.scene.key] ? (_this.props.layout.initWidth - _this.state.widths[props.scene.key]) / 2 : undefined;
         var RenderedLeftComponent = options.headerLeft || _HeaderBackButton2.default;
-        return React.createElement(RenderedLeftComponent, {
+        return _react3.default.createElement(RenderedLeftComponent, {
           onPress: _this._navigateBack,
           pressColorAndroid: options.headerPressColorAndroid,
           tintColor: options.headerTintColor,
+          buttonImage: options.headerBackImage,
           title: backButtonTitle,
           truncatedTitle: truncatedBackButtonTitle,
           titleStyle: options.headerBackTitleStyle,
           width: width,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 169
+            lineNumber: 140
           }
         });
       }, _this._renderRightComponent = function (props) {
@@ -270,7 +269,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
 
         var pointerEvents = offset !== 0 || isStale ? 'none' : 'box-none';
-        return React.createElement(
+        return _react3.default.createElement(
           _reactNative.Animated.View,
           {
             pointerEvents: pointerEvents,
@@ -278,7 +277,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             style: [styles.item, styles[name], props.style, styleInterpolator(_extends({}, this.props, props))],
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 258
+              lineNumber: 225
             }
           },
           subView
@@ -296,14 +295,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
           hasRightComponent: !!right
         });
 
-        return React.createElement(
+        return _react3.default.createElement(
           _reactNative.View,
           {
             style: [_reactNative.StyleSheet.absoluteFill, styles.header],
             key: "scene_" + props.scene.key,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 286
+              lineNumber: 253
             }
           },
           title,
@@ -352,15 +351,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
         var containerStyles = [styles.container, {
           height: appBarHeight
         }, headerStyle];
-        return React.createElement(
+        return _react3.default.createElement(
           _reactNative.Animated.View,
           _extends({}, rest, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 340
+              lineNumber: 305
             }
           }),
-          React.createElement(
+          _react3.default.createElement(
             _SafeAreaView2.default,
             {
               style: containerStyles,
@@ -370,16 +369,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
               },
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 341
+                lineNumber: 306
               }
             },
-            React.createElement(
+            _react3.default.createElement(
               _reactNative.View,
               {
                 style: styles.appBar,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 345
+                  lineNumber: 310
                 }
               },
               appBar
@@ -396,7 +395,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }]);
 
     return Header;
-  }(React.PureComponent), _class.defaultProps = {
+  }(_react3.default.PureComponent), _class.defaultProps = {
     leftInterpolator: _HeaderStyleInterpolator2.default.forLeft,
     titleInterpolator: _HeaderStyleInterpolator2.default.forCenter,
     rightInterpolator: _HeaderStyleInterpolator2.default.forRight

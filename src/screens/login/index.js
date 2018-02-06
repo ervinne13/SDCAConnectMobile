@@ -143,6 +143,7 @@ class Login extends Component {
               </Item>
             </Form>
             <Button
+              success
               onPress={() => this.onLogin()}
               block
               style={{

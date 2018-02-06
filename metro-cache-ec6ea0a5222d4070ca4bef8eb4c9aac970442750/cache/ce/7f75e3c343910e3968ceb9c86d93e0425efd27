@@ -146,7 +146,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             activeOpacity: this.props.activeOpacity > 0 ? this.props.activeOpacity : 0.5,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 49
+              lineNumber: 65
             }
           }), children);
         } else {
@@ -154,17 +154,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
             ref: function ref(c) {
               return _this2._root = c;
             },
-            onPress: this.props.onPress,
-            background: this.props.androidRippleColor ? _reactNative.TouchableNativeFeedback.Ripple(this.props.androidRippleColor) : _reactNative.TouchableNativeFeedback.Ripple(variables.androidRippleColor)
+            onPress: this.props.onPress
           }, this.prepareRootProps(), {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 59
+              lineNumber: 77
             }
           }), _react2.default.createElement(_reactNative.View, _extends({}, this.prepareRootProps(), {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 69
+              lineNumber: 82
             }
           }), children));
         }

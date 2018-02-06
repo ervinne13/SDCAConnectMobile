@@ -1,23 +1,26 @@
 __d(function (global, require, module, exports, _dependencyMap) {
-	'use strict';
+  'use strict';
 
-	var _Row = require(_dependencyMap[0], "./Components/Row");
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.Col = exports.Grid = exports.Row = undefined;
 
-	var _Row2 = _interopRequireDefault(_Row);
+  var _Row = require(_dependencyMap[0], "./Components/Row");
 
-	var _Grid = require(_dependencyMap[1], "./Components/Grid");
+  var _Row2 = _interopRequireDefault(_Row);
 
-	var _Grid2 = _interopRequireDefault(_Grid);
+  var _Grid = require(_dependencyMap[1], "./Components/Grid");
 
-	var _Col = require(_dependencyMap[2], "./Components/Col");
+  var _Grid2 = _interopRequireDefault(_Grid);
 
-	var _Col2 = _interopRequireDefault(_Col);
+  var _Col = require(_dependencyMap[2], "./Components/Col");
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  var _Col2 = _interopRequireDefault(_Col);
 
-	module.exports = {
-		Row: _Row2.default,
-		Col: _Col2.default,
-		Grid: _Grid2.default
-	};
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  exports.Row = _Row2.default;
+  exports.Grid = _Grid2.default;
+  exports.Col = _Col2.default;
 });

@@ -125,8 +125,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
     var prop = props[propName];
 
     _react2.default.Children.forEach(prop, function (child) {
-      if (typeof child !== "string") {
-        error = new Error(component + " should have only string");
+      if (typeof child !== "string" && typeof child !== "number") {
+        error = new Error(component + " should have only string or number");
       }
     });
 

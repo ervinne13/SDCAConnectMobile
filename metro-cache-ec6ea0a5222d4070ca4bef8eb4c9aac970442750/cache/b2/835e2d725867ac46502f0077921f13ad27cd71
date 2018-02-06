@@ -120,12 +120,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
             underlayColor: variables.listBtnUnderlayColor,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 23
+              lineNumber: 30
             }
           }, _react2.default.createElement(_reactNative.View, _extends({}, this.props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 29
+              lineNumber: 36
             }
           }), this.props.children));
         } else {
@@ -135,10 +135,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
             },
             onPress: this.props.onPress,
             onLongPress: this.props.onLongPress,
-            background: this.props.androidRippleColor ? _reactNative.TouchableNativeFeedback.Ripple(this.props.androidRippleColor) : _reactNative.TouchableNativeFeedback.Ripple(variables.androidRippleColorDark),
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 36
+              lineNumber: 41
             }
           }, _react2.default.createElement(_reactNative.View, {
             style: {

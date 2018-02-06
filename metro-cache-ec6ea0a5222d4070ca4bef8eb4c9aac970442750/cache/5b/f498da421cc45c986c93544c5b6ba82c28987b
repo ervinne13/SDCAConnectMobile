@@ -15,9 +15,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-  var _reactNative = require(_dependencyMap[2], "react-native");
+  var _nativeBase = require(_dependencyMap[2], "native-base");
 
-  var _nativeBase = require(_dependencyMap[3], "native-base");
+  var _reactNative = require(_dependencyMap[3], "react-native");
 
   var _styles = require(_dependencyMap[4], "./styles");
 
@@ -59,7 +59,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       var _this = _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).call(this, props));
 
       _this.state = {
-        server: 'http://172.16.150.229:8011',
+        server: 'http://sdca-connect.tk',
         username: null,
         password: null,
         isLoading: false,
@@ -79,6 +79,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
     }
 
     _createClass(Login, [{
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        _nativeBase.Toast.toastInstance = null;
+      }
+    }, {
       key: "onLogin",
       value: function onLogin() {
         var url, params, response, responseJson;
@@ -95,8 +100,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 _context.prev = 2;
                 url = this.state.server + '/api/v1/login';
                 params = {
-                  username: 'adolfo55',
-                  password: 'secret'
+                  username: this.state.username,
+                  password: this.state.password
                 };
                 console.log('Sending request to ' + url, params);
                 _context.next = 8;
@@ -172,7 +177,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: _styles2.default.container,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 102
+                lineNumber: 105
               }
             },
             _react3.default.createElement(
@@ -180,7 +185,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 103
+                  lineNumber: 106
                 }
               },
               _react3.default.createElement(
@@ -188,7 +193,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 104
+                    lineNumber: 107
                   }
                 },
                 _react3.default.createElement(
@@ -196,7 +201,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 105
+                      lineNumber: 108
                     }
                   },
                   "Login"
@@ -205,7 +210,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               _react3.default.createElement(_nativeBase.Right, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 107
+                  lineNumber: 110
                 }
               })
             ),
@@ -214,14 +219,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 110
+                  lineNumber: 113
                 }
               },
               _react3.default.createElement(_nativeBase.Spinner, {
                 color: "blue",
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 111
+                  lineNumber: 114
                 }
               })
             )
@@ -233,7 +238,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: _styles2.default.container,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 117
+                lineNumber: 120
               }
             },
             _react3.default.createElement(
@@ -241,7 +246,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 118
+                  lineNumber: 121
                 }
               },
               _react3.default.createElement(
@@ -249,7 +254,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 119
+                    lineNumber: 122
                   }
                 },
                 _react3.default.createElement(
@@ -257,7 +262,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 120
+                      lineNumber: 123
                     }
                   },
                   "Login"
@@ -266,7 +271,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               _react3.default.createElement(_nativeBase.Right, {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 122
+                  lineNumber: 125
                 }
               })
             ),
@@ -275,7 +280,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 125
+                  lineNumber: 128
                 }
               },
               _react3.default.createElement(
@@ -283,7 +288,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 {
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 126
+                    lineNumber: 129
                   }
                 },
                 _react3.default.createElement(
@@ -292,7 +297,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     stackedLabel: true,
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 127
+                      lineNumber: 130
                     }
                   },
                   _react3.default.createElement(
@@ -300,7 +305,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 128
+                        lineNumber: 131
                       }
                     },
                     "Server"
@@ -314,7 +319,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     value: this.state.server,
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 129
+                      lineNumber: 132
                     }
                   })
                 ),
@@ -324,7 +329,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     stackedLabel: true,
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 133
+                      lineNumber: 136
                     }
                   },
                   _react3.default.createElement(
@@ -332,7 +337,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 134
+                        lineNumber: 137
                       }
                     },
                     "Username"
@@ -345,7 +350,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     },
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 135
+                      lineNumber: 138
                     }
                   })
                 ),
@@ -356,7 +361,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     last: true,
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 137
+                      lineNumber: 140
                     }
                   },
                   _react3.default.createElement(
@@ -364,7 +369,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                       __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 138
+                        lineNumber: 141
                       }
                     },
                     "Password"
@@ -378,7 +383,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     },
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 139
+                      lineNumber: 142
                     }
                   })
                 )
@@ -386,6 +391,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               _react3.default.createElement(
                 _nativeBase.Button,
                 {
+                  success: true,
                   onPress: function onPress() {
                     return _this2.onLogin();
                   },
@@ -396,7 +402,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 142
+                    lineNumber: 145
                   }
                 },
                 _react3.default.createElement(
@@ -404,7 +410,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 149
+                      lineNumber: 153
                     }
                   },
                   "Sign In"
@@ -419,7 +425,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   },
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 152
+                    lineNumber: 156
                   }
                 },
                 this.state.errorMessage

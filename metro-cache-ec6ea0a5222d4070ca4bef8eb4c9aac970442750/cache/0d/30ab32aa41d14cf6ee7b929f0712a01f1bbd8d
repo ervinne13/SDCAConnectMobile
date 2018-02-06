@@ -44,7 +44,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
   }
 
-  var splashscreen = require(_dependencyMap[3], "../../../assets/splashscreen.png");
+  var splashscreen = require(_dependencyMap[3], "../../../assets/Splash2.png");
 
   var SplashPage = _wrapComponent("SplashPage")(function (_Component) {
     _inherits(SplashPage, _Component);

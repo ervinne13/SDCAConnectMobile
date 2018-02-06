@@ -25,15 +25,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _computeProps2 = _interopRequireDefault(_computeProps);
 
-  var _lodash = require(_dependencyMap[4], "lodash");
-
-  var _lodash2 = _interopRequireDefault(_lodash);
-
-  var _Col = require(_dependencyMap[5], "./Col");
+  var _Col = require(_dependencyMap[4], "./Col");
 
   var _Col2 = _interopRequireDefault(_Col);
 
-  var _Row = require(_dependencyMap[6], "./Row");
+  var _Row = require(_dependencyMap[5], "./Row");
 
   var _Row2 = _interopRequireDefault(_Row);
 
@@ -113,7 +109,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               onPress: this.props.onPress,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 43
+                lineNumber: 42
               }
             },
             _react3.default.createElement(
@@ -125,7 +121,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               }, this.props, this.prepareRootProps(), {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 44
+                  lineNumber: 43
                 }
               }),
               this.props.children
@@ -141,7 +137,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             }, this.props, this.prepareRootProps(), {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 54
+                lineNumber: 53
               }
             }),
             this.props.children

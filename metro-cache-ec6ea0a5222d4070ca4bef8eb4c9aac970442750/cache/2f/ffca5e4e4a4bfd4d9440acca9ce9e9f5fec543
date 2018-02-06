@@ -25,10 +25,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _computeProps2 = _interopRequireDefault(_computeProps);
 
-  var _lodash = require(_dependencyMap[4], "lodash");
-
-  var _lodash2 = _interopRequireDefault(_lodash);
-
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -90,13 +86,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
         if (this.props.onPress) {
           return _react3.default.createElement(
             _reactNative.TouchableOpacity,
-            {
-              onPress: this.props.onPress,
+            _extends({
+              onPress: this.props.onPress
+            }, this.prepareRootProps(), {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 31
+                lineNumber: 30
               }
-            },
+            }),
             _react3.default.createElement(
               _reactNative.View,
               _extends({

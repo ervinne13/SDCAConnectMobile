@@ -50,7 +50,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     };
   }
 
-  var npLogo = require(_dependencyMap[5], "../../../assets/splashscreen.png");
+  var npLogo = require(_dependencyMap[5], "../../../assets/Splash2.png");
 
   var Home = _wrapComponent("Home")(function (_Component) {
     _inherits(Home, _Component);
@@ -182,7 +182,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 {
                   style: {
                     backgroundColor: "#6FAF98",
-                    alignSelf: "center"
+                    width: '90%',
+                    alignSelf: "center",
+                    marginTop: 4
                   },
                   onPress: function onPress() {
                     return _this2.props.navigation.navigate("DrawerOpen");
@@ -197,10 +199,38 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 54
+                      lineNumber: 56
                     }
                   },
                   "Click here to start"
+                )
+              ),
+              _react3.default.createElement(
+                _nativeBase.Button,
+                {
+                  style: {
+                    backgroundColor: "#6FAF98",
+                    width: '90%',
+                    alignSelf: "center",
+                    marginTop: 4
+                  },
+                  onPress: function onPress() {
+                    return _this2.props.screenProps.onLogout();
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 59
+                  }
+                },
+                _react3.default.createElement(
+                  _nativeBase.Text,
+                  {
+                    __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 67
+                    }
+                  },
+                  "Logout"
                 )
               )
             )
