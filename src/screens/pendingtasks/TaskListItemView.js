@@ -9,7 +9,7 @@ import {
 } from "native-base";
 
 class TaskListItemView extends Component {
-  render() {    
+  render() {
 
     let task = this.props.task;
     let typeDisplay = '';
@@ -25,7 +25,9 @@ class TaskListItemView extends Component {
 
     return (
       <View>
-        <ListItem avatar onPress={() => this.props.navigation.navigate('PendingTaskScreen', {task})}>
+        <ListItem
+          avatar
+          onPress={() => this.props.navigation.navigate('PendingTaskScreen', {task})}>
           <Body>
             <Text>{task.displayName}</Text>
             <Text note>{task.description}</Text>
