@@ -123,8 +123,8 @@ export default class App extends Component {
     let server = await AsyncStorage.getItem('@Connect:Server');
     TaskService.beginSync(server, AuthToken)
       .then(() => {
-        //  show for 5s
-        Toast.show({ text: 'Tasks Synchronized', position: 'bottom', duration: 5000 });
+        //  show for 2s
+        Toast.show({ text: 'Tasks Synchronized', position: 'bottom', duration: 2000 });
       }).catch(err => {
         if (err === 401) {  //  Unauthorized
           this.setState({authenticated: false});

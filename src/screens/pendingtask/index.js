@@ -12,7 +12,8 @@ import {
   View,
   Left,
   Right,
-  Body
+  Body,
+  Spinner
 } from "native-base";
 
 import styles from "./styles";
@@ -20,13 +21,19 @@ import styles from "./styles";
 import TrueOrFalseView from "./TrueOrFalseView";
 import MultipleChoiceView from "./MultipleChoiceView";
 
+import TaskAPI from "../../api/TaskAPI";
+
+import {AsyncStorage, NetInfo} from "react-native";
+
 class PendingTaskScreen extends Component {
 
   constructor(props) {
     super(props);
 
     let task = this.props.navigation.state.params.task;
-    let state = {};
+    let state = {
+      loading: false
+    };
 
     task
       .items
@@ -39,70 +46,115 @@ class PendingTaskScreen extends Component {
     console.log(props.navigation);
   }
 
-  onTaskItemValueChange(sourceTask, value) {    
+  onTaskItemValueChange(sourceTask, value) {
     let key = 'task_item_' + sourceTask.order;
 
     this.setState({[key]: value});
   }
 
-  onSubmitAnswers() {
-    let form = this.state;
+  async onSubmitAnswers() {
+    let task = this.props.navigation.state.params.task;
+    let {loading, ...form} = this.state;
     console.log(form);
 
+    //  TODO: confirm here
+
+    this.setState({loading: true});
+
+    let authToken = await AsyncStorage.getItem('@Connect:AuthToken');
+    let server = await AsyncStorage.getItem('@Connect:Server');
+
+    let api = new TaskAPI(server, authToken);
+
+    try {
+      let response = await api.submitTaskResponse(task.id, form);
+      console.log(response);
+    } catch(e) {
+      //  TODO: toast here
+      console.error(e);
+    }
+  
+    this.setState({loading: false});
   }
 
   render() {
 
     let task = this.props.navigation.state.params.task;
 
-    return (
-      <Container style={styles.container}>
-        <Header>
-          <Left>
-            <Button transparent onPress={() => this.props.navigation.goBack()}>
-              <Icon name="arrow-back"/>
-            </Button>
-          </Left>
-          <Body>
-            <Title>{task.displayName}</Title>
-          </Body>
-          <Right/>
-        </Header>
+    if (this.state.loading) {
+      return (
+        <Container style={styles.container}>
+          <Header>
+            <Left>
+              <Button transparent onPress={() => this.props.navigation.goBack()}>
+                <Icon name="arrow-back"/>
+              </Button>
+            </Left>
+            <Body>
+              <Title>{task.displayName}</Title>
+            </Body>
+            <Right/>
+          </Header>
 
-        <Content padder>
-          <View>
-            <Text>Note that after submission, you are not allowed to edit your answers anymore.</Text>
-            {task
-              .items
-              .map((taskItem, key) => {
-                switch (taskItem.typeCode) {
-                  case 'TF':
-                    return <TrueOrFalseView
-                      taskItem={taskItem}
-                      key={key}
-                      onValueChange={this.onTaskItemValueChange.bind(this)}/>
-                  case 'MC':
-                    return <MultipleChoiceView
-                      taskItem={taskItem}
-                      key={key}
-                      onValueChange={this.onTaskItemValueChange.bind(this)}/>
-                  default:
-                    return <Text key={key}>Task item type {taskItem.typeCode}
-                      is not supported in mobile</Text>
-                }
-              })}
-          </View>
-        </Content>
+          <Content>
+            <Spinner color='blue'/>
+          </Content>
+        </Container>
+      );
+    } else {
+      return (
+        <Container style={styles.container}>
+          <Header>
+            <Left>
+              <Button transparent onPress={() => this.props.navigation.goBack()}>
+                <Icon name="arrow-back"/>
+              </Button>
+            </Left>
+            <Body>
+              <Title>{task.displayName}</Title>
+            </Body>
+            <Right/>
+          </Header>
 
-        <Footer>
-          <FooterTab>
-            <Button active info onPress={() => this.onSubmitAnswers()}>
-              <Text>Submit</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
-    );
+          <Content padder>
+            <View>
+              <Text>Note that after submission, you are not allowed to edit your answers anymore.</Text>
+              {task
+                .items
+                .map((taskItem, key) => {
+                  switch (taskItem.typeCode) {
+                    case 'TF':
+                      return <TrueOrFalseView
+                        taskItem={taskItem}
+                        key={key}
+                        onValueChange={this
+                        .onTaskItemValueChange
+                        .bind(this)}/>
+                    case 'MC':
+                      return <MultipleChoiceView
+                        taskItem={taskItem}
+                        key={key}
+                        onValueChange={this
+                        .onTaskItemValueChange
+                        .bind(this)}/>
+                    default:
+                      return <Text key={key}>Task item type {taskItem.typeCode}
+                        is not supported in mobile</Text>
+                  }
+                })}
+            </View>
+          </Content>
+
+          <Footer>
+            <FooterTab>
+              <Button active info onPress={() => this.onSubmitAnswers()}>
+                <Text>Submit</Text>
+              </Button>
+            </FooterTab>
+          </Footer>
+        </Container>
+      );
+    }
   }
 }
 
