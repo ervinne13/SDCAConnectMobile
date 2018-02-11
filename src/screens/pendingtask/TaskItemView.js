@@ -22,11 +22,17 @@ class TaskItemView extends Component {
 
     let taskItem = this.props.taskItem;
 
+    console.log('Task item view');
     console.log(taskItem);
 
     return (
       <View>
-        <Text>{taskItem.text}</Text>
+        <Text>Test: {taskItem.order}.) {taskItem.text}</Text>
+
+        <View>
+          
+        </View>
+
       </View>
     );
   }
