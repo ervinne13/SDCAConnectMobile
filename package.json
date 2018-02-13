@@ -11,6 +11,7 @@
     "npm": "^5.6.0",
     "react": "16.2.0",
     "react-native": "0.52.2",
+    "react-native-awesome-alerts": "^1.0.6",
     "react-navigation": "^1.0.0-beta.27",
     "realm": "^2.2.6"
   },
@@ -24,6 +25,6 @@
     "preset": "react-native"
   },
   "resolutions": {
-		"metro-bundler": "0.20.2" 
+    "metro-bundler": "0.20.2"
   }
 }

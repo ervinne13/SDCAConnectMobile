@@ -21,9 +21,16 @@ import styles from "./styles";
 import TrueOrFalseView from "./TrueOrFalseView";
 import MultipleChoiceView from "./MultipleChoiceView";
 
+//  APIs
 import TaskAPI from "../../api/TaskAPI";
 
+//  Services
+import TaskService from '../../services/TaskService';
+
 import {AsyncStorage, NetInfo} from "react-native";
+
+import AwesomeAlert from 'react-native-awesome-alerts';
+
 
 class PendingTaskScreen extends Component {
 
@@ -31,6 +38,11 @@ class PendingTaskScreen extends Component {
     super(props);
 
     let task = this.props.navigation.state.params.task;
+
+    if (!task) {
+      return;
+    }
+
     let state = {
       loading: false
     };
@@ -54,7 +66,11 @@ class PendingTaskScreen extends Component {
 
   async onSubmitAnswers() {
     let task = this.props.navigation.state.params.task;
-    let {loading, ...form} = this.state;
+    let {
+      loading,
+      showAlert,
+      ...form
+    } = this.state;
     console.log(form);
 
     //  TODO: confirm here
@@ -68,18 +84,30 @@ class PendingTaskScreen extends Component {
 
     try {
       let response = await api.submitTaskResponse(task.id, form);
+      TaskService.remove(task);
       console.log(response);
-    } catch(e) {
+
+      this.props.navigation.goBack();
+    } catch (e) {
       //  TODO: toast here
       console.error(e);
     }
-  
+
     this.setState({loading: false});
   }
 
+  showAlert() {
+    this.setState({showAlert: true});
+  };
+
+  hideAlert() {
+    this.setState({showAlert: false});
+  };
+
   render() {
 
-    let task = this.props.navigation.state.params.task;
+    const task = this.props.navigation.state.params.task;
+    const {showAlert} = this.state;
 
     if (this.state.loading) {
       return (
@@ -147,11 +175,31 @@ class PendingTaskScreen extends Component {
 
           <Footer>
             <FooterTab>
-              <Button active info onPress={() => this.onSubmitAnswers()}>
+              <Button active info onPress={() => this.showAlert()}>
                 <Text>Submit</Text>
               </Button>
             </FooterTab>
           </Footer>
+
+          <AwesomeAlert
+            show={showAlert}
+            showProgress={false}
+            title="Warning"
+            message="After you submit, you may not edit your responses anymore. Are you sure you want to submit now?"
+            closeOnTouchOutside={true}
+            closeOnHardwareBackPress={false}
+            showCancelButton={true}
+            showConfirmButton={true}
+            cancelText="No, cancel"
+            confirmText="Yes, submit my responses"
+            confirmButtonColor="#DD6B55"
+            onCancelPressed={() => {
+            this.hideAlert();
+          }}
+            onConfirmPressed={() => {
+            this.onSubmitAnswers();
+            this.hideAlert();
+          }}/>
         </Container>
       );
     }

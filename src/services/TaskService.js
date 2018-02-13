@@ -13,29 +13,30 @@ const TaskService = {
     let api = new TaskAPI(server, authToken);
     let webTasks = await api.getTasks(); //  TODO: add date filtering
 
-    console.log('Tasks Fetched', webTasks);
+    // console.log('Tasks Fetched', webTasks);
 
     if (!webTasks.length) {
       console.log('No tasks available');
       return;
     }
 
-    webTasks.forEach(webTask => {
-      console.log(webTask);
+    webTasks.forEach(webTask => {      
       TaskService.save(new Task(webTask));
     });
 
-    //  for testing
-    let tasks = TaskService.findAll();
-    tasks.forEach(task => {
-      console.log(task);
-      console.log(task.id);
-    });
+    console.log('Done sync tasks');
 
-    if (tasks.length) {
-      let lodashTaskItems = _.values(tasks[0].items);
-      console.log(lodashTaskItems);
-    }
+    // //  for testing
+    // let tasks = TaskService.findAll();
+    // tasks.forEach(task => {
+    //   console.log(task);
+    //   console.log(task.id);
+    // });
+
+    // if (tasks.length) {
+    //   let lodashTaskItems = _.values(tasks[0].items);
+    //   console.log(lodashTaskItems);
+    // }
 
   },
 
@@ -66,6 +67,7 @@ const TaskService = {
   },
 
   save: function (task) {
+    console.log('Attempting to save task:', task);
     //  update instead if the record already exists
     if (repository.objects('Task').filtered("id = '" + task.id + "'").length) {
       return TaskService.update(task);
@@ -75,6 +77,7 @@ const TaskService = {
       repository.write(() => {
         task.createdAt = new Date();
         repository.create('Task', task);
+        console.log('Task Saved:', task);
         resolve(task);
       });
     });
@@ -88,7 +91,25 @@ const TaskService = {
         resolve(task);
       });
     });
+  },
+
+  remove: function (task) {
+    return new Promise(resolve => {
+      repository.write(() => {
+        console.log('deleting task items: ');
+        console.log(task.items);
+        repository.delete(task.items);
+        console.log('deleted');
+
+        console.log('deleting task: ');
+        console.log(task);
+        repository.delete(task);
+        console.log('deleted');
+        resolve();
+      });
+    });
   }
+
 };
 
 module.exports = TaskService;
