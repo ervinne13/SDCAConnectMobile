@@ -1,7 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  var baseForOwn = require(_dependencyMap[0], './_baseForOwn'),
-      createBaseEach = require(_dependencyMap[1], './_createBaseEach');
-
-  var baseEach = createBaseEach(baseForOwn);
-  module.exports = baseEach;
-});

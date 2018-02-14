@@ -10,9 +10,16 @@ class TaskItem {
     this.text = webTaskItem.task_item_text;
     this.choices = webTaskItem.choices_json;
     this.correctAnswer = webTaskItem.correct_answer_free_field;
-    this.createdAt = new Date(webTaskItem.created_at);
-    this.updatedAt = new Date(webTaskItem.updated_at);
+    this.createdAt = this.dateFromString(webTaskItem.created_at);
+    this.updatedAt = this.dateFromString(webTaskItem.updated_at);    
   }
+
+  //  TODO: create global function later
+  dateFromString(dateTimeString) {
+    let bits = dateTimeString.split(/\D/);
+    return new Date(bits[0], --bits[1], bits[2], bits[3], bits[4], bits[5]);
+  }
+
 }
 
 TaskItem.schema = {

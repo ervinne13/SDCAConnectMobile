@@ -1,9 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  var nativeKeys = Object.keys;
-
-  function baseKeys(object) {
-    return nativeKeys(Object(object));
-  }
-
-  module.exports = baseKeys;
-});

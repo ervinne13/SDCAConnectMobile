@@ -9,14 +9,20 @@ class Task {
     this.typeCode = webTask.type_code;
     this.displayName = webTask.display_name;
     this.description = webTask.description;    
-    this.createdAt = new Date(webTask.created_at);
-    this.updatedAt = new Date(webTask.updated_at);
+    this.createdAt = this.dateFromString(webTask.created_at);
+    this.updatedAt = this.dateFromString(webTask.updated_at);
 
     this.items = [];
 
     webTask.items.forEach(item => {
       this.items.push(new TaskItem(item));
     });
+  }
+
+  //  TODO: create global function later
+  dateFromString(dateTimeString) {
+    let bits = dateTimeString.split(/\D/);
+    return new Date(bits[0], --bits[1], bits[2], bits[3], bits[4], bits[5]);
   }
 }
 

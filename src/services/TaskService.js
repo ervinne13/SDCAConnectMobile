@@ -16,7 +16,7 @@ const TaskService = {
     // console.log('Tasks Fetched', webTasks);
 
     if (!webTasks.length) {
-      console.log('No tasks available');
+      console.warn('No tasks available');
       return;
     }
 
@@ -25,18 +25,6 @@ const TaskService = {
     });
 
     console.log('Done sync tasks');
-
-    // //  for testing
-    // let tasks = TaskService.findAll();
-    // tasks.forEach(task => {
-    //   console.log(task);
-    //   console.log(task.id);
-    // });
-
-    // if (tasks.length) {
-    //   let lodashTaskItems = _.values(tasks[0].items);
-    //   console.log(lodashTaskItems);
-    // }
 
   },
 
@@ -73,13 +61,21 @@ const TaskService = {
       return TaskService.update(task);
     }
 
+    console.log('Attempt');
+
     return new Promise(resolve => {
+
+      console.log('Promise');      
+      
       repository.write(() => {
+        console.log('Repository Write');
         task.createdAt = new Date();
         repository.create('Task', task);
         console.log('Task Saved:', task);
         resolve(task);
       });
+
+      console.log('After repository write');
     });
   },
 

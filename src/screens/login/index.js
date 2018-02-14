@@ -39,6 +39,7 @@ class Login extends Component {
       .then(server => {
         if (server) {
           this.setState({server});
+          console.log('server', this.state.server);
         }
       });
 

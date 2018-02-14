@@ -1,6 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  var baseProperty = require(_dependencyMap[0], './_baseProperty');
-
-  var getLength = baseProperty('length');
-  module.exports = getLength;
-});
