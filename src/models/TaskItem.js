@@ -1,4 +1,6 @@
 
+import Moment from 'moment';
+
 class TaskItem {
   constructor(webTaskItem = {}) {
     this.id = webTaskItem.task_id + '_' + webTaskItem.order;
@@ -10,8 +12,12 @@ class TaskItem {
     this.text = webTaskItem.task_item_text;
     this.choices = webTaskItem.choices_json;
     this.correctAnswer = webTaskItem.correct_answer_free_field;
-    this.createdAt = new Date(webTaskItem.created_at);
-    this.updatedAt = new Date(webTaskItem.updated_at);
+    // this.createdAt = new Date(webTaskItem.created_at);
+    // this.updatedAt = new Date(webTaskItem.updated_at);
+
+    this.createdAt = Moment(webTaskItem.created_at);
+    this.updatedAt = Moment(webTaskItem.updated_at);
+
   }
 }
 

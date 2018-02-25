@@ -1,5 +1,6 @@
 
 import TaskItem from './TaskItem';
+import Moment from 'moment';
 
 class Task {
   constructor(webTask = {}) {
@@ -9,8 +10,11 @@ class Task {
     this.typeCode = webTask.type_code;
     this.displayName = webTask.display_name;
     this.description = webTask.description;    
-    this.createdAt = new Date(webTask.created_at);
-    this.updatedAt = new Date(webTask.updated_at);
+    // this.createdAt = new Date(webTask.created_at);
+    // this.updatedAt = new Date(webTask.updated_at);
+
+    this.createdAt = Moment(webTaskItem.created_at);
+    this.updatedAt = Moment(webTaskItem.updated_at);
 
     this.items = [];
 

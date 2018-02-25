@@ -16,7 +16,13 @@ import styles from "./style";
 const drawerCover = require("../../../assets/drawer.png");
 const datas = [
   {
-    name: "PendingTasksScreen",
+    name: "Pending Tasks",
+    route: "PendingTasksScreen",
+    icon: "phone-portrait",
+    bg: "#C5F442"
+  },
+  {
+    name: "Posts",
     route: "PendingTasksScreen",
     icon: "phone-portrait",
     bg: "#C5F442"
