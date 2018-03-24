@@ -18,10 +18,11 @@ import {
 
 import {AsyncStorage, NetInfo, RefreshControl} from "react-native";
 import {ListView} from 'realm/react-native';
+import PostListItemView from "./PostListItemView";
 
 import styles from "./styles";
 
-import TaskService from '../../services/TaskService';
+import PostService from '../../services/PostService';
 
 class PostsScreen extends Component {
 
@@ -31,7 +32,7 @@ class PostsScreen extends Component {
   }
 
   loadPosts(firstTime = false) {
-    let posts = Array.from(TaskService.findAll());
+    let posts = Array.from(PostService.findAll());
     const ds = new ListView.DataSource({
       rowHasChanged: (r1, r2) => r1 !== r2
     });
@@ -62,24 +63,24 @@ class PostsScreen extends Component {
   async beginSync() {
     let AuthToken = await AsyncStorage.getItem('@Connect:AuthToken');
     let server = await AsyncStorage.getItem('@Connect:Server');
-    // TaskService
-    //   .beginSync(server, AuthToken)
-    //   .then(() => {
-    //     this.setState({refreshing: false});
-    //     this.loadTasks();
-    //     //  show for 5s
-    //     Toast.show({text: 'Tasks Synchronized', position: 'bottom', duration: 5000});
-    //   })
-    //   .catch(err => {
-    //     this.setState({refreshing: false});
-    //     if (err === 401) { //  Unauthorized
-    //       //  notify that the user needs to log in again
-    //       console.error('User needs to relogin');
-    //     } else {
-    //       console.error(err);
-    //       throw new Error(err);
-    //     }
-    //   });
+    PostService
+      .beginSync(server, AuthToken)
+      .then(() => {
+        this.setState({refreshing: false});
+        this.loadPosts();
+        //  show for 5s
+        Toast.show({text: 'Posts Synchronized', position: 'bottom', duration: 5000});
+      })
+      .catch(err => {
+        this.setState({refreshing: false});
+        if (err === 401) { //  Unauthorized
+          //  notify that the user needs to log in again
+          console.error('User needs to relogin');
+        } else {
+          console.error(err);
+          throw new Error(err);
+        }
+      });
   }
 
   render() {
@@ -113,7 +114,7 @@ class PostsScreen extends Component {
                 .bind(this)
             } />}
               dataSource={this.state.dataSource}
-              renderRow={(rowData) => <Text>Test</Text>}/>
+              renderRow={(rowData) => <PostListItemView post={rowData} />}/>
           </View>
         </Content>
 

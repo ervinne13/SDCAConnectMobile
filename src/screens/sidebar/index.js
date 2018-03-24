@@ -23,7 +23,7 @@ const datas = [
   },
   {
     name: "Posts",
-    route: "PendingTasksScreen",
+    route: "PostsScreen",
     icon: "phone-portrait",
     bg: "#C5F442"
   }

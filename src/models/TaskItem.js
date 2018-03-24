@@ -15,8 +15,8 @@ class TaskItem {
     // this.createdAt = new Date(webTaskItem.created_at);
     // this.updatedAt = new Date(webTaskItem.updated_at);
 
-    this.createdAt = Moment(webTaskItem.created_at);
-    this.updatedAt = Moment(webTaskItem.updated_at);
+    this.createdAt = Moment(webTaskItem.created_at).toDate();
+    this.updatedAt = Moment(webTaskItem.updated_at).toDate();
 
   }
 }

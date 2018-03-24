@@ -15,3 +15,5 @@ class PostAPI {
     return API.handleResponse(response);
   }
 }
+
+module.exports = PostAPI;

@@ -23,12 +23,14 @@ import Task from './models/Task';
 
 //  Services
 import TaskService from './services/TaskService';
+import PostService from './services/PostService';
 
 const Drawer = DrawerNavigator(
   {    
     Home: { screen: Home },
     PendingTasksScreen: { screen: PendingTasksScreen},
     PendingTaskScreen: {screen: PendingTaskScreen},
+    PostsScreen: {screen: PostsScreen},
   },
   {
     initialRouteName: "Home",
@@ -127,6 +129,19 @@ export default class App extends Component {
       .then(() => {
         //  show for 2s
         Toast.show({ text: 'Tasks Synchronized', position: 'bottom', duration: 2000 });
+      }).catch(err => {
+        if (err === 401) {  //  Unauthorized
+          this.setState({authenticated: false});
+        } else {
+          console.error(err);
+          throw new Error(err);
+        }        
+      });
+
+    PostService.beginSync(server, AuthToken)
+      .then(() => {
+        //  show for 2s
+        Toast.show({ text: 'Posts Synchronized', position: 'bottom', duration: 2000 });
       }).catch(err => {
         if (err === 401) {  //  Unauthorized
           this.setState({authenticated: false});
