@@ -41,7 +41,7 @@ class NHListAvatar extends Component {
 
     // this.displayProfiles([], true);
 
-    this.loadProfiles('students');
+    this.loadProfiles('Students');
   }
 
   async loadProfiles(type) {
@@ -111,7 +111,7 @@ class NHListAvatar extends Component {
 
   renderItem(data) {
     return (
-      <ListItem avatar>
+      <ListItem avatar onPress={() => this.props.navigation.navigate("ProfileScreen", data)}>
         <Left>
           <Thumbnail small source={{ uri: this.state.server + '/' + data.user_account.image_url }} />
         </Left>
@@ -162,6 +162,7 @@ class NHListAvatar extends Component {
           <ListView
             dataSource={this.state.dataSource}
             renderRow={data => this.renderItem(data)}
+            
           />
         </Content>
       </Container>
