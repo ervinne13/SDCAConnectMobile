@@ -1,7 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  function checkGlobal(value) {
-    return value && value.Object === Object ? value : null;
-  }
-
-  module.exports = checkGlobal;
-});

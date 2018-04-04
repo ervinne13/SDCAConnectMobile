@@ -1,9 +1,0 @@
-__d(function (global, require, module, exports, _dependencyMap) {
-  var nativeGetPrototype = Object.getPrototypeOf;
-
-  function getPrototype(value) {
-    return nativeGetPrototype(Object(value));
-  }
-
-  module.exports = getPrototype;
-});
