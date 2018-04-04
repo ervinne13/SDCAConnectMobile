@@ -27,7 +27,7 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      server: 'http://sdca-connect.tk',
+      server: 'http://sdca-connect.herokuapp.com',
       username: null,
       password: null,
       isLoading: false,
@@ -39,6 +39,7 @@ class Login extends Component {
       .then(server => {
         if (server) {
           this.setState({server});
+          console.log('server', this.state.server);
         }
       });
 
