@@ -26,7 +26,13 @@ const datas = [
     route: "PostsScreen",
     icon: "phone-portrait",
     bg: "#C5F442"
-  }
+  },
+  {
+    name: "Profiles",
+    route: "ProfilesScreen",
+    icon: "person",
+    bg: "#C5F442"
+  },
 ];
 
 class SideBar extends Component {

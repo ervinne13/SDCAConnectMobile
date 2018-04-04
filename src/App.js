@@ -10,6 +10,7 @@ import Splashscreen from "./screens/splashscreen";
 import PendingTasksScreen from "./screens/pendingtasks";
 import PendingTaskScreen from "./screens/pendingtask";
 import PostsScreen from "./screens/posts";
+import ProfilesScreen from "./screens/profiles";
 import Home from "./screens/home/";
 import SideBar from "./screens/sidebar";
 
@@ -31,6 +32,7 @@ const Drawer = DrawerNavigator(
     PendingTasksScreen: { screen: PendingTasksScreen},
     PendingTaskScreen: {screen: PendingTaskScreen},
     PostsScreen: {screen: PostsScreen},
+    ProfilesScreen: {screen: ProfilesScreen},
   },
   {
     initialRouteName: "Home",
@@ -50,6 +52,7 @@ const AppNavigator = StackNavigator(
     PendingTasksScreen: { screen: PendingTasksScreen},
     PendingTaskScreen: {screen: PendingTaskScreen},
     PostsScreen: {screen: PostsScreen},
+    ProfilesScreen: {screen: ProfilesScreen},
   },
   {
     initialRouteName: "Drawer",
