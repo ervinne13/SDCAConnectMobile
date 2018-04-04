@@ -15,10 +15,19 @@ class TaskItem {
     // this.createdAt = new Date(webTaskItem.created_at);
     // this.updatedAt = new Date(webTaskItem.updated_at);
 
-    this.createdAt = Moment(webTaskItem.created_at).toDate();
-    this.updatedAt = Moment(webTaskItem.updated_at).toDate();
+    // this.createdAt = Moment(webTaskItem.created_at).toDate();
+    // this.updatedAt = Moment(webTaskItem.updated_at).toDate();
 
+    this.createdAt = this.dateFromString(webTaskItem.created_at);
+    this.updatedAt = this.dateFromString(webTaskItem.updated_at);    
   }
+
+  //  TODO: create global function later
+  dateFromString(dateTimeString) {
+    let bits = dateTimeString.split(/\D/);
+    return new Date(bits[0], --bits[1], bits[2], bits[3], bits[4], bits[5]);
+  }
+
 }
 
 TaskItem.schema = {
