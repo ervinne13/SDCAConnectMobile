@@ -14,7 +14,8 @@ import {
   Right,
   Body,
   Toast,
-
+  List,
+  ListItem,
 } from "native-base";
 
 import { AsyncStorage, NetInfo, RefreshControl } from "react-native";
@@ -35,6 +36,8 @@ class ProfileScreen extends Component {
       bioText: ''
     };
 
+    console.log(this.state.profile);
+
   }
 
   async componentDidMount() {
@@ -42,6 +45,24 @@ class ProfileScreen extends Component {
     this.setState({ server });
     this.setState({ imageUrl: this.state.server + '/' + this.state.profile.user_account.image_url });
     this.setState({ bioText: this.state.profile.student_number ? 'Student Number: ' + this.state.profile.student_number : this.state.profile.about });
+
+    console.log(this.state.imageUrl);
+
+  }
+
+  renderItem(data) {
+    return (
+      <ListItem icon>
+        <Left style={{marginLeft: 10}}>
+          <Icon name='star' />
+        </Left>
+        <Body>
+          <Text>
+            {data.display_name}
+          </Text>
+        </Body>
+      </ListItem>
+    );
   }
 
   render() {
@@ -63,7 +84,7 @@ class ProfileScreen extends Component {
           <View style={styles.userRow}>
             <Image
               style={styles.userImage}
-              source={{ uri: 'https://randomuser.me/api/portraits/women/86.jpg' }}
+              source={{ uri: this.state.imageUrl }}
             />
             <View style={styles.userNameRow}>
               <Text style={styles.userNameText}>{this.state.profile.user_account.display_name}</Text>
@@ -72,6 +93,12 @@ class ProfileScreen extends Component {
               <Text style={styles.userBioText}>{this.state.bioText}</Text>
             </View>
           </View>
+
+          <List
+            style={{ padding: 10, color: '#FEC724'}}
+            dataArray={this.state.profile.user_account.badges}
+            renderRow={data => this.renderItem(data)}
+          />
         </Content>
       </Container>
     );
