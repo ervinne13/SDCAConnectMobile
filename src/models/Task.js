@@ -13,8 +13,8 @@ class Task {
     // this.createdAt = new Date(webTask.created_at);
     // this.updatedAt = new Date(webTask.updated_at);
 
-    this.createdAt = Moment(webTaskItem.created_at).toDate();
-    this.updatedAt = Moment(webTaskItem.updated_at).toDate();
+    this.createdAt = Moment(webTask.created_at).toDate();
+    this.updatedAt = Moment(webTask.updated_at).toDate();
 
     this.items = [];
 
