@@ -12,4 +12,11 @@ public class MainActivity extends ReactActivity {
     protected String getMainComponentName() {
         return "SDCAConnectMobile";
     }
+
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        NotificationManager nMgr = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+//        nMgr.cancelAll();
+//    }
 }
